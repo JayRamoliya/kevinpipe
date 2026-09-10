@@ -1,9 +1,10 @@
 import React from "react";
-import { ShieldCheck, HeartHandshake, Sparkles } from "lucide-react";
+import { ShieldCheck, HeartHandshake, Sparkles, ArrowRight } from "lucide-react";
 
 export const CareerPage: React.FC = () => {
   return (
     <div className="w-full bg-white text-[#111827]">
+      {/* Hero Section */}
       <section
         className="text-white py-16 lg:py-20 relative overflow-hidden bg-cover bg-center"
         style={{
@@ -33,6 +34,7 @@ export const CareerPage: React.FC = () => {
         </div>
       </section>
 
+      {/* Career Form Section */}
       <section className="py-14 sm:py-20 bg-[#F3F6F8]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-10">
@@ -45,37 +47,38 @@ export const CareerPage: React.FC = () => {
             </h2>
 
             <p className="text-sm sm:text-base text-gray-600 mt-3 leading-relaxed">
-              Submit your details through the application form below. Our HR
-              team will review your profile and contact shortlisted candidates.
+              Submit your application through our online form. Our HR team will
+              review your profile and contact shortlisted candidates.
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl border border-gray-100 shadow-lg overflow-hidden">
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLScMi37Z1pcmo1nrh9Y3ll5GxlNXnnMWdb4SPMMYI93PBXtxKw/viewform?embedded=true"
-              width="100%"
-              height="1200"
-              frameBorder="0"
-              marginHeight={0}
-              marginWidth={0}
-              title="Career Application Form"
-              className="w-full"
-            >
-              Loading...
-            </iframe>
+          {/* Application Card */}
+          <div className="bg-white rounded-3xl border border-gray-100 shadow-lg p-8 sm:p-12 text-center">
+            <div className="max-w-2xl mx-auto">
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#071B4A] mb-4">
+                Ready To Join Kevin PVC?
+              </h3>
+
+              <p className="text-gray-600 leading-relaxed mb-8">
+                We are always looking for talented and dedicated professionals.
+                Click the button below to fill out the career application form.
+                Our HR department will review your application and get in touch
+                if your profile matches our requirements.
+              </p>
+
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScMi37Z1pcmo1nrh9Y3ll5GxlNXnnMWdb4SPMMYI93PBXtxKw/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#08A9D6] hover:bg-[#0796be] text-white font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+              >
+                Apply Now
+                <ArrowRight className="w-5 h-5" />
+              </a>
+            </div>
           </div>
 
-          <div className="text-center mt-6">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLScMi37Z1pcmo1nrh9Y3ll5GxlNXnnMWdb4SPMMYI93PBXtxKw/viewform?embedded=true"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#08A9D6] hover:bg-[#0796be] text-white font-bold transition-all"
-            >
-              Open Form In New Tab
-            </a>
-          </div>
-
+          {/* Why Join Us */}
           <div className="mt-14 text-center max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-[#071B4A]">
               Why Join Kevin PVC?
@@ -89,7 +92,7 @@ export const CareerPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-            <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
+            <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
               <ShieldCheck className="w-8 h-8 text-[#08A9D6] mb-4" />
 
               <h4 className="text-lg font-bold text-[#071B4A]">
@@ -102,7 +105,7 @@ export const CareerPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
+            <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
               <Sparkles className="w-8 h-8 text-[#08A9D6] mb-4" />
 
               <h4 className="text-lg font-bold text-[#071B4A]">
@@ -115,7 +118,7 @@ export const CareerPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
+            <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all">
               <HeartHandshake className="w-8 h-8 text-[#08A9D6] mb-4" />
 
               <h4 className="text-lg font-bold text-[#071B4A]">
