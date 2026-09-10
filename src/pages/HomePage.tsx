@@ -291,7 +291,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                       {product.shortDesc}
                     </p>
 
-                    <div className="space-y-1.5 text-xs sm:text-sm text-gray-600 mb-6 bg-[#F3F6F8] p-3.5 rounded-xl">
+                    {/* <div className="space-y-1.5 text-xs sm:text-sm text-gray-600 mb-6 bg-[#F3F6F8] p-3.5 rounded-xl">
                       <p>
                         <span className="font-semibold text-gray-800">
                           Size:
@@ -304,7 +304,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                         </span>{" "}
                         {product.pressureRating}
                       </p>
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 border-t border-gray-100">
