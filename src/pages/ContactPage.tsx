@@ -83,8 +83,7 @@ export const ContactPage: React.FC = () => {
                       <address className="not-italic text-gray-600 mt-1 leading-relaxed text-xs sm:text-sm font-normal">
                         KEVIN PVC PIPE INDUSTRIES<br />
                         At. Rajkot-Bhavnagar Highway,<br />
-                        Untvad, Taluka Babra,<br />
-                        District Amreli, Gujarat - 365421, India.
+                        Untvad, Gujarat - 365421, India.
                       </address>
                     </div>
                   </div>
@@ -104,9 +103,6 @@ export const ContactPage: React.FC = () => {
                           +91 99253 73353
                         </a>
                       </p>
-                      <p className="text-xs text-gray-500 mt-0.5">
-                        Landline: <a href="tel:02791291353" className="hover:text-[#08A9D6]">02791-291353</a>
-                      </p>
                     </div>
                   </div>
 
@@ -125,9 +121,6 @@ export const ContactPage: React.FC = () => {
                           info@kevinpvcpipe.com
                         </a>
                       </p>
-                      <p className="text-xs text-gray-500">
-                        Sales desk: sales@kevinpvcpipe.com
-                      </p>
                     </div>
                   </div>
 
@@ -138,7 +131,7 @@ export const ContactPage: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="font-bold text-[#071B4A] font-heading text-sm sm:text-base">Operating Hours</h3>
-                      <p className="text-xs text-gray-600 mt-1 font-normal">Monday – Saturday: 9:00 AM – 7:30 PM</p>
+                      <p className="text-xs text-gray-600 mt-1 font-normal">Monday – Sunday: 8:00 AM – 8:00 PM</p>
                       <p className="text-xs text-gray-500 font-normal">Factory Dispatch: 24/7 Loading Operations</p>
                     </div>
                   </div>
@@ -147,7 +140,6 @@ export const ContactPage: React.FC = () => {
 
               </div>
 
-              {/* Quick Logistics Badge */}
               <div className="bg-[#071B4A] rounded-card p-5 sm:p-6 text-white soft-shadow flex items-center gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-[#08A9D6] text-white flex items-center justify-center shrink-0">
                   <Factory className="w-6 h-6" />
@@ -303,7 +295,6 @@ export const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. EMBEDDED GOOGLE MAP / LOCATION VIEWER */}
       <section className="py-14 sm:py-16 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -321,7 +312,7 @@ export const ContactPage: React.FC = () => {
             </div>
 
             <a
-              href="https://maps.google.com/?q=Untvad,+Babra,+Amreli,+Gujarat"
+              href="https://maps.app.goo.gl/utJ4nToWFkaujsoN7"
               target="_blank"
               rel="noreferrer"
               className="w-full sm:w-auto min-h-[44px] justify-center px-5 py-2.5 rounded-full bg-white border border-gray-200 text-xs font-bold text-[#071B4A] hover:text-[#08A9D6] hover:border-[#08A9D6] transition-colors soft-shadow inline-flex items-center gap-2 text-center"
@@ -335,7 +326,7 @@ export const ContactPage: React.FC = () => {
           <div className="relative rounded-card overflow-hidden border border-gray-200 soft-shadow h-[320px] sm:h-[400px] bg-gray-100">
             <iframe
               title="Kevin PVC Pipe Industries Location Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118228.78491873155!2d71.21856729571168!3d21.852445199616053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39589d9709d73d6d%3A0xe54e63f58a74e5ad!2sUntvad%2C%20Gujarat%20365421!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1850.6210654034576!2d71.21650059072222!3d21.925241195670125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3958f586955fa995%3A0x2ca9088cd27ec233!2sKevin%20PVC%20Pipe%20Industries%20Untvad!5e0!3m2!1sen!2sin!4v1789021989926!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
