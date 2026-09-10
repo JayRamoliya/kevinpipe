@@ -161,7 +161,7 @@ export default function App() {
         </main>
 
         {/* Global Footer */}
-        {/* <Footer /> */}
+        <Footer />
 
         {/* Quick Quote Modal */}
         <QuoteModal

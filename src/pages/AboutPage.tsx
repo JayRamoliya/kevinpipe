@@ -135,63 +135,65 @@ export const AboutPage: React.FC = () => {
             <span className="text-xs font-bold uppercase tracking-widest text-[#08A9D6] block mb-2 font-heading">
               Leadership & Vision
             </span>
+
             <h2 className="text-[26px] sm:text-3xl lg:text-4xl font-extrabold text-[#071B4A] font-heading leading-tight">
-              Guided by Industrial Integrity & Deep Technical Insight
+              Leadership That Drives Quality & Trust
             </h2>
           </div>
 
           <div className="bg-white rounded-card border border-gray-100 soft-shadow p-6 sm:p-10 lg:p-12 w-full max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-center">
-              {/* Owner Photo */}
               <div className="md:col-span-4 text-center">
                 <div className="w-40 h-40 sm:w-48 sm:h-48 mx-auto rounded-2xl overflow-hidden border-4 border-sky-100 shadow-md">
                   <img
                     src={OWNER_IMAGE}
-                    alt="Shri Rajeshbhai Patel - Founder & Managing Director"
+                    alt="Kishorbhai Hadiya - Founder & Managing Director"
                     className="w-full h-full object-cover"
                   />
                 </div>
+
                 <div className="mt-3.5">
                   <h3 className="text-lg font-bold text-[#071B4A] font-heading">
-                    Shri Rajeshbhai Patel
+                    Kishorbhai Hadiya
                   </h3>
+
                   <p className="text-xs font-semibold text-[#08A9D6] uppercase tracking-wider">
                     Founder & Managing Director
                   </p>
                 </div>
               </div>
 
-              {/* Owner Description / Message */}
               <div className="md:col-span-8 space-y-4 border-t md:border-t-0 md:border-l border-gray-100 md:pl-8 pt-6 md:pt-0">
                 <span className="text-3xl text-[#08A9D6] font-serif leading-none">
                   “
                 </span>
+
                 <p className="text-base text-gray-700 italic leading-relaxed font-normal">
-                  When a farmer installs a column pipe in a 1,000-foot borewell,
-                  or a municipal board installs a drinking water mainline under
-                  a highway, they place their absolute trust in our engineering.
-                  We refuse to compromise that trust with cheaper recycled
-                  fillers or rushed curing. Every meter of pipe bearing the
-                  KEVIN name is built to endure fifty years of unbroken service.
+                  At KEVIN PVC PIPE, our commitment has always been to deliver
+                  dependable quality, lasting performance and complete customer
+                  satisfaction. Every product we manufacture reflects our
+                  dedication to excellence, innovation and building long-term
+                  trust with our customers and business partners.
                 </p>
 
                 <div className="pt-2 text-xs sm:text-sm text-gray-600 space-y-1">
                   <p>
-                    <strong>Executive Office:</strong> Kevin PVC Pipe Industries
-                    Headquarters
+                    <strong>Leadership Focus:</strong> Quality Manufacturing,
+                    Customer Satisfaction & Sustainable Growth
                   </p>
+
                   <p>
-                    <strong>Philosophy:</strong> Continuous R&D, Transparent
-                    Business Ethics, and Farmer-First Pricing.
+                    <strong>Core Values:</strong> Integrity, Reliability,
+                    Innovation and Long-Term Relationships
                   </p>
                 </div>
 
                 <div className="pt-2">
                   <Link
-                    to="/become-partner"
+                    to="/contact"
                     className="min-h-[44px] inline-flex items-center gap-2 text-sm font-bold text-[#08A9D6] hover:text-[#071B4A] transition-colors"
                   >
-                    <span>Partner with our leadership network</span>
+                    <span>Connect With Our Team</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>

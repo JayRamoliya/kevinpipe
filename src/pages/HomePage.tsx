@@ -271,7 +271,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   />
 
                   <div className="absolute top-4 left-4">
@@ -436,32 +436,33 @@ export const HomePage: React.FC<HomePageProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
             <span className="text-xs font-bold uppercase tracking-widest text-[#08A9D6] block mb-2 font-heading">
-              Trusted By Government & Enterprise
+              Trusted Certifications
             </span>
+
             <h2 className="text-[24px] sm:text-2xl lg:text-3xl font-extrabold text-[#071B4A] font-heading">
-              Our Approved Clients & Certifying Bodies
+              Certifications & Recognition
             </h2>
           </div>
 
-          {/* Responsive Grid: 2 on mobile, 4 on desktop */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-            {CLIENT_LOGOS.map((client) => (
+            {[
+              "/logos/BIS.webp",
+              "/logos/wasmo.png",
+              "/logos/GWSSB.jpg",
+              "/logos/girda.jpg",
+              "/logos/ikhedut.jpg",
+              "/logos/BSCIC.png",
+              "/logos/ISI.jpg",
+            ].map((logo, index) => (
               <div
-                key={client.name}
-                className="bg-[#F3F6F8] rounded-card p-5 sm:p-6 text-center border border-gray-100 soft-shadow hover:bg-white hover:border-sky-200 transition-all flex flex-col items-center justify-center"
+                key={index}
+                className="bg-[#F3F6F8] rounded-card p-5 sm:p-6 border border-gray-100 soft-shadow hover:bg-white hover:border-sky-200 transition-all flex items-center justify-center min-h-[140px]"
               >
-                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#071B4A] text-[#08A9D6] flex items-center justify-center mb-3 font-extrabold text-sm tracking-wider font-heading">
-                  {client.name}
-                </div>
-                <h3 className="text-sm font-bold text-[#071B4A] font-heading">
-                  {client.name}
-                </h3>
-                <p className="text-[11px] text-gray-500 mt-1 line-clamp-2">
-                  {client.fullTitle}
-                </p>
-                <span className="mt-2.5 inline-block px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-sky-100 text-[#071B4A]">
-                  {client.tag}
-                </span>
+                <img
+                  src={logo}
+                  alt="Certification Logo"
+                  className="max-h-24 sm:max-h-28 w-auto object-contain transition-all duration-300"
+                />
               </div>
             ))}
           </div>

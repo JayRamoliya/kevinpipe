@@ -8,6 +8,7 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ onOpenQuote }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openMobileMenu, setOpenMobileMenu] = useState(null);
   const location = useLocation();
 
   // Close mobile drawer when route changes
@@ -29,19 +30,34 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuote }) => {
 
   const navLinks = [
     { label: "Home", to: "/" },
-    { label: "About", to: "/about" },
-    // { label: "Products", to: "/products" },
-    // { label: "Become Partner", to: "/become-partner" },
-    // { label: "Career", to: "/career" },
-    // { label: "Contact", to: "/contact" },
+
+    {
+      label: "About Us",
+      to: "/about",
+      children: [{ label: "Clients", to: "/clients" }],
+    },
+
+    {
+      label: "Products",
+      to: "/products",
+      children: [
+        { label: "uPVC Casing Pipe", to: "/products/upvc-casing-pipe" },
+        { label: "uPVC Column Pipe", to: "/products/upvc-column-pipe" },
+        { label: "uPVC Pressure Pipe", to: "/products/upvc-pressure-pipe" },
+        { label: "HDPE Pipe", to: "/products/hdpe-pipe" },
+        { label: "HDPE Sprinkler Pipe", to: "/products/hdpe-sprinkler-pipe" },
+      ],
+    },
+    { label: "Become Partner", to: "/become-partner" },
+    { label: "Contact", to: "/contact" },
   ];
 
   return (
     <header
       id="main-header"
-      className="w-full bg-white border-b border-gray-100 sticky top-0 z-40 shadow-xs"
+      className="w-full bg-white border-b border-gray-100 sticky top-0 z-40 shadow-xs overflow-visible"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
         <div className="flex items-center justify-between h-18 sm:h-20">
           <Link
             id="brand-logo-link"
@@ -56,28 +72,74 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuote }) => {
             />
           </Link>
 
-          {/* Desktop & Large Tablet Navigation (Compact spacing on lg, relaxed on xl) */}
-          <nav
-            id="desktop-navigation"
-            className="hidden lg:flex items-center space-x-5 xl:space-x-7"
-          >
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.to}
-                id={`nav-link-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
-                to={link.to}
-                end={link.to === "/"}
-                className={({ isActive }) =>
-                  `text-sm font-semibold transition-colors py-1.5 relative ${
-                    isActive
-                      ? "text-[#08A9D6] font-bold after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#08A9D6] after:rounded-full"
-                      : "text-[#111827] hover:text-[#08A9D6]"
-                  }`
-                }
-              >
-                {link.label}
-              </NavLink>
-            ))}
+          <nav className="hidden lg:flex items-center gap-7">
+            {navLinks.map((item) =>
+              item.children ? (
+                <div key={item.label} className="relative group">
+                  <Link
+                    to={item.to}
+                    className="flex items-center gap-1 text-sm font-semibold text-[#111827] hover:text-[#08A9D6]"
+                  >
+                    {item.label}
+
+                    <svg
+                      className="w-4 h-4 transition-transform group-hover:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </Link>
+
+                  <div
+                    className="
+            absolute left-0 top-full
+            min-w-[280px]
+            bg-[#EAF5F6]
+            border border-[#cfe4e7]
+            shadow-xl
+            opacity-0 invisible
+            translate-y-2
+            group-hover:opacity-100
+            group-hover:visible
+            group-hover:translate-y-0
+            transition-all duration-200
+            z-50
+          "
+                  >
+                    {item.children.map((sub) => (
+                      <Link
+                        key={sub.to}
+                        to={sub.to}
+                        className="
+                block px-6 py-4
+                border-b border-[#cfe4e7]
+                hover:bg-white
+                text-[#111827]
+                transition-colors
+              "
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  className="text-sm font-semibold text-[#111827] hover:text-[#08A9D6]"
+                >
+                  {item.label}
+                </NavLink>
+              ),
+            )}
           </nav>
 
           {/* Right Action on Desktop & Tablet */}
@@ -143,25 +205,81 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuote }) => {
               Navigation Menu
             </p>
             <nav className="flex flex-col space-y-1.5">
-              {navLinks.map((link) => (
-                <NavLink
-                  key={link.to}
-                  id={`mobile-nav-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
-                  to={link.to}
-                  end={link.to === "/"}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={({ isActive }) =>
-                    `min-h-[48px] flex items-center justify-between text-base font-semibold px-4 rounded-xl transition-colors ${
-                      isActive
-                        ? "bg-sky-50 text-[#08A9D6] font-bold border border-sky-100"
-                        : "text-[#111827] hover:bg-gray-50 active:bg-gray-100"
-                    }`
-                  }
-                >
-                  <span>{link.label}</span>
-                  <ArrowRight className="w-4 h-4 text-gray-400" />
-                </NavLink>
-              ))}
+              {navLinks.map((item) =>
+                item.children ? (
+                  <div key={item.label} className="border-b border-gray-100">
+                    <div className="flex items-center">
+                      {/* Parent Page Link */}
+                      <Link
+                        to={item.to}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="flex-1 min-h-[48px] flex items-center px-4 text-base font-semibold text-[#111827]"
+                      >
+                        {item.label}
+                      </Link>
+
+                      {/* Dropdown Toggle */}
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setOpenMobileMenu(
+                            openMobileMenu === item.label ? null : item.label,
+                          )
+                        }
+                        className="p-4"
+                      >
+                        <svg
+                          className={`w-4 h-4 transition-transform ${
+                            openMobileMenu === item.label ? "rotate-180" : ""
+                          }`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+
+                    {openMobileMenu === item.label && (
+                      <div className="pl-4 pb-2">
+                        {item.children.map((sub) => (
+                          <Link
+                            key={sub.to}
+                            to={sub.to}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="block py-3 px-4 text-sm text-gray-600 hover:text-[#08A9D6]"
+                          >
+                            {sub.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <NavLink
+                    key={item.to}
+                    to={item.to}
+                    end={item.to === "/"}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={({ isActive }) =>
+                      `min-h-[48px] flex items-center justify-between text-base font-semibold px-4 rounded-xl transition-colors ${
+                        isActive
+                          ? "bg-sky-50 text-[#08A9D6] font-bold border border-sky-100"
+                          : "text-[#111827] hover:bg-gray-50"
+                      }`
+                    }
+                  >
+                    <span>{item.label}</span>
+                    <ArrowRight className="w-4 h-4 text-gray-400" />
+                  </NavLink>
+                ),
+              )}
             </nav>
           </div>
 
