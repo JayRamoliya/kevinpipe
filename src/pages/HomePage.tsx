@@ -119,7 +119,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               <div className="relative mx-auto max-w-lg lg:max-w-none">
                 <div className="relative rounded-card overflow-hidden bg-white/5 border border-white/15 soft-shadow p-2">
                   <img
-                    src={HERO_IMAGE}
+                    src='hero.jpg'
                     alt="KEVIN PVC Pipe Manufacturing"
                     className="w-full h-[260px] sm:h-[360px] lg:h-[440px] object-cover rounded-[18px]"
                     loading="eager"
