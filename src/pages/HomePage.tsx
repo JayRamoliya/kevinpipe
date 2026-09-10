@@ -41,7 +41,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
-            <div className="lg:col-span-6 space-y-5 sm:space-y-6 text-center lg:text-left">
+            <div className="order-2 lg:order-1 lg:col-span-6 space-y-5 sm:space-y-6 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-sky-200 border border-white/10 text-xs font-semibold tracking-wide max-w-full truncate">
                 <ShieldCheck className="w-4 h-4 text-[#08A9D6] shrink-0" />
                 <span className="truncate">
@@ -115,17 +115,17 @@ export const HomePage: React.FC<HomePageProps> = ({
               </div>
             </div>
 
-            <div className="lg:col-span-6 w-full">
+            <div className="order-1 lg:order-2 lg:col-span-6 w-full">
               <div className="relative mx-auto max-w-lg lg:max-w-none">
                 <div className="relative rounded-card overflow-hidden bg-white/5 border border-white/15 soft-shadow p-2">
                   <img
-                    src='hero.jpg'
+                    src='hero-1.jpg'
                     alt="KEVIN PVC Pipe Manufacturing"
                     className="w-full h-[260px] sm:h-[360px] lg:h-[440px] object-cover rounded-[18px]"
                     loading="eager"
                   />
 
-                  <div className="absolute bottom-4 left-4 right-4 sm:right-auto bg-[#071B4A]/90 backdrop-blur-md border border-white/15 rounded-2xl p-3 sm:p-4 text-white shadow-xl flex items-center gap-3">
+                  {/* <div className="absolute bottom-4 left-4 right-4 sm:right-auto bg-[#071B4A]/90 backdrop-blur-md border border-white/15 rounded-2xl p-3 sm:p-4 text-white shadow-xl flex items-center gap-3">
                     <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#08A9D6] flex items-center justify-center shrink-0">
                       <Droplets className="w-5 h-5 text-white" />
                     </div>
@@ -138,7 +138,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                         uPVC, PVC & HDPE Pipes for Every Application
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

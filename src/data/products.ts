@@ -28,19 +28,14 @@ export const PRODUCTS_DATA: ProductItem[] = [
     fullDesc:
       "Kevin uPVC Ringfit Pipes are manufactured from premium virgin uPVC compound and equipped with high-quality elastomeric rubber sealing rings for superior leak-proof performance. Designed for pressurized water supply systems, irrigation networks, municipal pipelines, and rural drinking water projects, these pipes offer quick push-fit installation, excellent hydraulic efficiency, and long-lasting durability. The Ringfit joint absorbs ground movement and minor alignment variations, making it ideal for large-scale underground pipeline projects.",
 
-    image: '/uPVC Ringfit Pipe.jpg',
-
+    image: "/uPVC Ringfit Pipe.webp",
     sizes: "63 mm to 315 mm Outer Diameter",
-
     standard: "IS 4985:2021 / ISO 1452",
-
     pressureRating: "Class 2 to Class 6 (4 kgf/cm² to 16 kgf/cm²)",
-
     types: [
       "Elastomeric Rubber Ring Joint Pipe",
       "Push-Fit Ringfit Water Supply Pipe",
     ],
-
     features: [
       "Pre-installed EPDM elastomeric rubber ring ensures leak-proof joints",
       "Push-fit jointing enables faster installation than conventional systems",
@@ -50,7 +45,6 @@ export const PRODUCTS_DATA: ProductItem[] = [
       "UV stabilized formulation for enhanced outdoor durability",
       "Maintenance-free operation with long service life",
     ],
-
     applications: [
       "Municipal water supply distribution networks",
       "Jal Jeevan Mission and rural water supply schemes",
@@ -59,7 +53,6 @@ export const PRODUCTS_DATA: ProductItem[] = [
       "Industrial process and utility water systems",
       "Infrastructure and government pipeline projects",
     ],
-
     technicalOverview:
       "Kevin uPVC Ringfit Pipes are manufactured according to IS 4985:2021 specifications and undergo rigorous quality testing including hydrostatic pressure testing, impact resistance, dimensional verification, gasket performance evaluation, and long-term durability assessments. The integrated elastomeric sealing ring creates a flexible yet watertight joint, significantly reducing installation time while ensuring dependable performance throughout the pipeline's service life.",
 
@@ -131,7 +124,13 @@ export const PRODUCTS_DATA: ProductItem[] = [
       },
     ],
 
-    gallery: [PRESSURE_IMAGE, RING_FIT_IMAGE, FACTORY_IMAGE, LAB_IMAGE],
+    gallery: [
+      "/uPVC Ringfit Pipe.webp",
+      "/1.webp",
+      "/2.webp",
+      "/3.webp",
+      "/4.webp",
+    ],
   },
   {
     id: "upvc-agri-plain-socket-pipe",
@@ -144,7 +143,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     fullDesc:
       "Kevin uPVC Agri Plain Socket Pipes are manufactured using premium virgin uPVC compound and engineered specifically for agricultural water conveyance applications. Designed for superior hydraulic performance, lightweight handling, corrosion resistance, and long service life, these pipes provide an economical solution for irrigation networks, borewell connections, farm water supply lines, and rural water distribution systems. The plain socket design ensures strong solvent cement jointing, delivering leak-proof performance and long-term reliability in demanding agricultural environments.",
 
-    image: "/uPVC Agri Plain Socket Pipe.jpg",
+    image: "/uPVC Agri Plain Socket Pipe.webp",
 
     sizes: "20 mm to 315 mm Outer Diameter",
 
@@ -260,7 +259,13 @@ export const PRODUCTS_DATA: ProductItem[] = [
       },
     ],
 
-    gallery: [PRESSURE_IMAGE, RING_FIT_IMAGE, FACTORY_IMAGE, LAB_IMAGE],
+    gallery: [
+      "/uPVC Agri Plain Socket Pipe.webp",
+      "/2.webp",
+      "/5.webp",
+      "/6.webp",
+      "/4.webp",
+    ],
   },
   {
     id: "upvc-column-pipe",
@@ -269,7 +274,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
       "Heavy-duty submersible pump riser pipe engineered to support high tensile loads.",
     fullDesc:
       "Kevin uPVC Column Pipes are specifically developed as the ultimate replacement for conventional galvanized iron (GI) riser pipes used in deep borewells. Equipped with CNC-machined square threads and bi-axial orientation, they withstand immense hydraulic pressure, pump vibrations, and column deadweight without joint unthreading or stretching.",
-    image: "/uPVC Column Pipe.jpg",
+    image: "/uPVC Column Pipe.webp",
     sizes: '25 mm (1") to 150 mm (6") Nominal Bore',
     standard: "IS 12818 / ASTM D1785",
     pressureRating: "Medium, Standard, Heavy & Super Heavy (Up to 35 kg/cm²)",
@@ -361,7 +366,13 @@ export const PRODUCTS_DATA: ProductItem[] = [
         workingPressure: "20 - 35 kg/cm²",
       },
     ],
-    gallery: [COLUMN_IMAGE, CASING_IMAGE, FACTORY_IMAGE, LAB_IMAGE],
+    gallery: [
+      "/uPVC Column Pipe.webp",
+      "/1.webp",
+      "/5.webp",
+      "/6.webp",
+      "/4.webp",
+    ],
   },
   {
     id: "upvc-casing-pipe",
@@ -370,7 +381,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
       "Superior borewell casing and screen pipes engineered to protect deep tube wells.",
     fullDesc:
       "Kevin uPVC Casing and Screen Pipes (Ribbed & Plain) are precision manufactured under IS 12818 guidelines. Specially designed to line groundwater boreholes, shielding pumps against rock cave-ins, silt penetration, and mineral encrustation while facilitating clean gravel packing.",
-    image: "/uPVC Blue Casing Pipe.jpg",
+    image: "/uPVC Blue Casing Pipe.webp",
     sizes: '100 mm (4") to 250 mm (10") Nominal Diameter',
     standard: "IS 12818:2010 (CS & CM)",
     pressureRating: "Shallow (CS) & Deep Well (CM) Classifications",
@@ -451,7 +462,13 @@ export const PRODUCTS_DATA: ProductItem[] = [
         workingPressure: "For wells up to 250 m",
       },
     ],
-    gallery: [CASING_IMAGE, COLUMN_IMAGE, FACTORY_IMAGE, PRESSURE_IMAGE],
+    gallery: [
+      "/uPVC Blue Casing Pipe.webp",
+      "/2.webp",
+      "/3.webp",
+      "/1.webp",
+      "/4.webp",
+    ],
   },
   {
     id: "hdpe-pipe",
@@ -460,7 +477,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
       "Durable, leak-free and corrosion-resistant HDPE pipes for water supply, agriculture, sewerage and industrial applications.",
     fullDesc:
       "Kevin HDPE Pipes are manufactured from high-quality PE 63, PE 80 and PE 100 raw materials, ensuring excellent strength, flexibility and long service life. Widely used for potable water supply, agriculture irrigation, sewer systems, conduit ducting and industrial piping applications. Their superior flexibility, corrosion resistance and leak-proof performance make them an ideal alternative to conventional piping systems.",
-    image: "/HDPE Pipe.jpg",
+    image: "/HDPE Pipe.webp",
     sizes: "20 mm to 315 mm",
     standard: "IS 4984",
     pressureRating: "PN 2.5, 4, 6, 8, 10, 12.5 & 16 kg/cm²",
@@ -559,7 +576,13 @@ export const PRODUCTS_DATA: ProductItem[] = [
         workingPressure: "0.6 - 1.6 MPa",
       },
     ],
-    gallery: [HDPE_IMAGE, SPRINKLER_IMAGE, FACTORY_IMAGE, LAB_IMAGE],
+    gallery: [
+      "/HDPE Pipe.webp",
+      "/6.webp",
+      "/2.webp",
+      "/3.webp",
+      "/4.webp",
+    ],
   },
   {
     id: "hdpe-sprinkler-pipe",
@@ -568,7 +591,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
       "Quick-coupling portable sprinkler piping designed for uniform agricultural crop irrigation.",
     fullDesc:
       "Kevin HDPE Sprinkler Pipes are engineered for maximum portability and rapid field assembly in agricultural fields. Fitted with precision-welded quick-action metal / plastic latch couplers, C-clamps, and silicone seal rings, enabling farmers to move irrigation lines across plots in minutes with zero tool requirement.",
-    image: "/HDPE Sprinkler Pipe.jpg",
+    image: "/HDPE Sprinkler Pipe.webp",
     sizes: "63 mm, 75 mm, 90 mm, 110 mm Outer Diameter (6m Lengths)",
     standard: "IS 14151 (Part 1 & Part 2)",
     pressureRating: "Class 1 (2.5 kgf/cm²) & Class 2 (3.2 kgf/cm²)",
@@ -646,7 +669,13 @@ export const PRODUCTS_DATA: ProductItem[] = [
         workingPressure: "0.25 MPa",
       },
     ],
-    gallery: [SPRINKLER_IMAGE, HDPE_IMAGE, FACTORY_IMAGE, LAB_IMAGE],
+    gallery: [
+      "/HDPE Sprinkler Pipe.webp",
+      "/2.webp",
+      "/5.webp",
+      "/6.webp",
+      "/4.webp",
+    ],
   },
 ];
 

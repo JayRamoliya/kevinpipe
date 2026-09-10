@@ -83,7 +83,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 <img
                   src={currentHeroImage}
                   alt={product.name}
-                  className="w-full h-[260px] sm:h-[360px] lg:h-[420px] object-cover rounded-[18px] transition-all duration-300"
+                  className="w-full h-[260px] sm:h-[360px] lg:h-[420px] object-contain rounded-[18px] transition-all duration-300"
                 />
                 <div className="absolute top-4 left-4 sm:top-5 sm:left-5">
                   <span className="inline-block px-3 py-1.5 rounded-full text-xs font-bold bg-[#071B4A]/90 text-white backdrop-blur-md">
