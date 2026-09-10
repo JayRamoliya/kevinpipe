@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #071B4A;
+  --color-navy-dark: #04102F;
+  --color-navy-light: #0d2766;
+  --color-cyan-brand: #08A9D6;
+  --color-cyan-hover: #0796be;
+  --color-cyan-light: #F0F9FD;
+  --color-cyan-subtle: #E1F4FA;
+  --color-surface-gray: #F3F6F8;
+  --color-dark-text: #111827;
+  --font-sans: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #111827;
+  background-color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Custom rounded utility for 24px cards as specified in requirements */
+.rounded-card {
+  border-radius: 24px;
+}
+
+/* Soft shadows */
+.soft-shadow {
+  box-shadow: 0 10px 30px rgba(7, 27, 74, 0.06);
+}
+
+.soft-shadow-hover:hover {
+  box-shadow: 0 16px 36px rgba(7, 27, 74, 0.10);
+}
+
+/* Print/catalogue view support */
+@media print {
+  header, footer, .no-print {
+    display: none !important;
+  }
+}
