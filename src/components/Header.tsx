@@ -43,13 +43,16 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuote }) => {
       children: [
         { label: "uPVC Casing Pipe", to: "/products/upvc-casing-pipe" },
         { label: "uPVC Ringfit Pipe", to: "/products/upvc-ringfit-pipe" },
-        { label: "uPVC Agri Plain Socket Pipe", to: "/products/upvc-agri-plain-socket-pipe" },
+        {
+          label: "uPVC Agri Plain Socket Pipe",
+          to: "/products/upvc-agri-plain-socket-pipe",
+        },
         { label: "uPVC Column Pipe", to: "/products/upvc-column-pipe" },
         { label: "HDPE Pipe", to: "/products/hdpe-pipe" },
         { label: "HDPE Sprinkler Pipe", to: "/products/hdpe-sprinkler-pipe" },
       ],
     },
-    { label: "Become Partner", to: "/become-partner" },
+    { label: "Become Dealer/Distributor ", to: "/become-partner" },
     { label: "Contact", to: "/contact" },
   ];
 
@@ -294,17 +297,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuote }) => {
               <span>Call: +91 99253 73353</span>
             </a>
 
-            <button
-              id="mobile-drawer-get-quote-btn"
-              type="button"
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenQuote();
-              }}
-              className="w-full min-h-[48px] py-3.5 px-6 rounded-full bg-[#08A9D6] hover:bg-[#0796be] text-white font-bold text-sm tracking-wide text-center shadow-md active:scale-95 transition-all"
+            <Link
+              to="/career"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block w-full min-h-[48px] py-3.5 px-6 rounded-full bg-[#08A9D6] hover:bg-[#0796be] text-white font-bold text-sm tracking-wide text-center shadow-md active:scale-95 transition-all"
             >
-              Get Quote
-            </button>
+              Career
+            </Link>
 
             <p className="text-[11px] text-center text-gray-500 font-medium pt-1">
               Untvad, Babra, Dist. Amreli, Gujarat - 365421

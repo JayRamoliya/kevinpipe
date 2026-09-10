@@ -17,14 +17,17 @@ export const Footer: React.FC = () => {
     { label: "Home", to: "/" },
     { label: "About", to: "/about" },
     { label: "Products", to: "/products" },
-    { label: "Become Partner", to: "/become-partner" },
-  { label: "Career", to: "/career" },
+    { label: "Become Dealer/Distributor ", to: "/become-partner" },
+    { label: "Career", to: "/career" },
     { label: "Contact", to: "/contact" },
   ];
 
   const productLinks = [
     { label: "uPVC Ringfit Pipe", to: "/products/upvc-ringfit-pipe" },
-    { label: "uPVC Agri Plain Socket Pipe", to: "/products/upvc-agri-plain-socket-pipe" },
+    {
+      label: "uPVC Agri Plain Socket Pipe",
+      to: "/products/upvc-agri-plain-socket-pipe",
+    },
     { label: "uPVC Column Pipe", to: "/products/upvc-column-pipe" },
     { label: "uPVC Casing Pipe", to: "/products/upvc-casing-pipe" },
     { label: "HDPE Pipe", to: "/products/hdpe-pipe" },

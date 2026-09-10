@@ -19,15 +19,11 @@ export const RIGID_IMAGE = "/src/assets/images/rigid_pipes_1788956067400.jpg";
 export const PRODUCTS_DATA: ProductItem[] = [
   {
     id: "upvc-ringfit-pipe",
-
     name: "uPVC Ringfit Pipe",
-
     shortDesc:
       "Leak-proof elastomeric rubber ring joint pipes designed for fast installation and reliable water distribution networks.",
-
     fullDesc:
       "Kevin uPVC Ringfit Pipes are manufactured from premium virgin uPVC compound and equipped with high-quality elastomeric rubber sealing rings for superior leak-proof performance. Designed for pressurized water supply systems, irrigation networks, municipal pipelines, and rural drinking water projects, these pipes offer quick push-fit installation, excellent hydraulic efficiency, and long-lasting durability. The Ringfit joint absorbs ground movement and minor alignment variations, making it ideal for large-scale underground pipeline projects.",
-
     image: "/uPVC Ringfit Pipe.webp",
     sizes: "63 mm to 315 mm Outer Diameter",
     standard: "IS 4985:2021 / ISO 1452",
@@ -55,7 +51,6 @@ export const PRODUCTS_DATA: ProductItem[] = [
     ],
     technicalOverview:
       "Kevin uPVC Ringfit Pipes are manufactured according to IS 4985:2021 specifications and undergo rigorous quality testing including hydrostatic pressure testing, impact resistance, dimensional verification, gasket performance evaluation, and long-term durability assessments. The integrated elastomeric sealing ring creates a flexible yet watertight joint, significantly reducing installation time while ensuring dependable performance throughout the pipeline's service life.",
-
     benefits: [
       "50+ years expected service life",
       "100% leak-proof rubber ring sealing system",
@@ -64,7 +59,6 @@ export const PRODUCTS_DATA: ProductItem[] = [
       "Suitable for long-distance underground pipelines",
       "Excellent hydraulic efficiency with reduced pressure loss",
     ],
-
     specifications: [
       {
         size: '63 mm (2")',
@@ -123,39 +117,26 @@ export const PRODUCTS_DATA: ProductItem[] = [
         workingPressure: "0.4 - 1.0 MPa",
       },
     ],
-
     gallery: [
       "/uPVC Ringfit Pipe.webp",
-      "/1.webp",
-      "/2.webp",
       "/3.webp",
-      "/4.webp",
     ],
   },
   {
     id: "upvc-agri-plain-socket-pipe",
-
     name: "uPVC Agri Plain Socket Pipe",
-
     shortDesc:
       "Reliable and cost-effective agricultural piping solution for irrigation, water distribution, and farm water management systems.",
-
     fullDesc:
       "Kevin uPVC Agri Plain Socket Pipes are manufactured using premium virgin uPVC compound and engineered specifically for agricultural water conveyance applications. Designed for superior hydraulic performance, lightweight handling, corrosion resistance, and long service life, these pipes provide an economical solution for irrigation networks, borewell connections, farm water supply lines, and rural water distribution systems. The plain socket design ensures strong solvent cement jointing, delivering leak-proof performance and long-term reliability in demanding agricultural environments.",
-
     image: "/uPVC Agri Plain Socket Pipe.webp",
-
     sizes: "20 mm to 315 mm Outer Diameter",
-
     standard: "IS 4985:2021",
-
     pressureRating: "Class 1 to Class 6 (2.5 kgf/cm² to 16.0 kgf/cm²)",
-
     types: [
       "Plain Socket Pipe (Solvent Cement Joint)",
       "Agricultural Water Supply Pipe",
     ],
-
     features: [
       "Ultra-smooth inner surface minimizes friction losses and improves water flow efficiency",
       "Lightweight construction enables easy transportation, handling, and installation",
@@ -164,7 +145,6 @@ export const PRODUCTS_DATA: ProductItem[] = [
       "UV-stabilized formulation ensures longer outdoor service life",
       "Excellent impact strength and resistance to cracking under field conditions",
     ],
-
     applications: [
       "Agricultural irrigation systems",
       "Borewell and submersible pump delivery lines",
@@ -173,10 +153,8 @@ export const PRODUCTS_DATA: ProductItem[] = [
       "Drip irrigation mainlines and sub-mains",
       "Rural water supply projects and agricultural infrastructure",
     ],
-
     technicalOverview:
       "Manufactured in compliance with IS 4985:2021, Kevin uPVC Agri Plain Socket Pipes undergo stringent quality inspections including dimensional accuracy testing, hydrostatic pressure testing, impact resistance evaluation, and long-term performance verification. The solvent cement plain socket jointing system creates a secure and durable connection, ensuring reliable operation across agricultural and irrigation applications.",
-
     benefits: [
       "50+ years expected service life",
       "Lower pumping costs due to superior flow characteristics",
@@ -185,7 +163,6 @@ export const PRODUCTS_DATA: ProductItem[] = [
       "Quick installation reducing labor costs",
       "Economical alternative to conventional metal pipelines",
     ],
-
     specifications: [
       {
         size: '20 mm (1/2")',
@@ -258,13 +235,10 @@ export const PRODUCTS_DATA: ProductItem[] = [
         workingPressure: "0.4 - 1.0 MPa",
       },
     ],
-
     gallery: [
       "/uPVC Agri Plain Socket Pipe.webp",
       "/2.webp",
-      "/5.webp",
       "/6.webp",
-      "/4.webp",
     ],
   },
   {
@@ -368,10 +342,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     ],
     gallery: [
       "/uPVC Column Pipe.webp",
-      "/1.webp",
-      "/5.webp",
       "/6.webp",
-      "/4.webp",
     ],
   },
   {
@@ -464,10 +435,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     ],
     gallery: [
       "/uPVC Blue Casing Pipe.webp",
-      "/2.webp",
-      "/3.webp",
       "/1.webp",
-      "/4.webp",
     ],
   },
   {
@@ -578,10 +546,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     ],
     gallery: [
       "/HDPE Pipe.webp",
-      "/6.webp",
-      "/2.webp",
-      "/3.webp",
-      "/4.webp",
+      "/5.webp",
     ],
   },
   {
@@ -671,9 +636,6 @@ export const PRODUCTS_DATA: ProductItem[] = [
     ],
     gallery: [
       "/HDPE Sprinkler Pipe.webp",
-      "/2.webp",
-      "/5.webp",
-      "/6.webp",
       "/4.webp",
     ],
   },
