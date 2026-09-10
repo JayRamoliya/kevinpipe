@@ -237,7 +237,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
       "Superior borewell casing and screen pipes engineered to protect deep tube wells.",
     fullDesc:
       "Kevin uPVC Casing and Screen Pipes (Ribbed & Plain) are precision manufactured under IS 12818 guidelines. Specially designed to line groundwater boreholes, shielding pumps against rock cave-ins, silt penetration, and mineral encrustation while facilitating clean gravel packing.",
-    image: "uPVC Blue Casing Pipe.jpg",
+    image: "/uPVC Blue Casing Pipe.jpg",
     sizes: '100 mm (4") to 250 mm (10") Nominal Diameter',
     standard: "IS 12818:2010 (CS & CM)",
     pressureRating: "Shallow (CS) & Deep Well (CM) Classifications",
@@ -324,41 +324,49 @@ export const PRODUCTS_DATA: ProductItem[] = [
     id: "hdpe-pipe",
     name: "HDPE Pipe",
     shortDesc:
-      "High-density polyethylene pipes for pressurized water mains, gas distribution and trenchless pipelines.",
+      "Durable, leak-free and corrosion-resistant HDPE pipes for water supply, agriculture, sewerage and industrial applications.",
     fullDesc:
-      "Kevin HDPE Pipes are extruded from premium virgin PE 100 / PE 80 polymers. Known for extreme flexibility, notch resistance, and seamless jointing via thermal butt-fusion and electrofusion. Ideal for challenging terrains, seismic zones, and horizontal directional drilling (HDD) projects.",
-    image: "HDPE Pipe.jpg",
-    sizes: "20 mm to 400 mm (Coils & 6m/12m Straight Lengths)",
-    standard: "IS 4984:2016 / ISO 4427",
-    pressureRating: "PN 2.5 to PN 16 (SDR 41 to SDR 9)",
+      "Kevin HDPE Pipes are manufactured from high-quality PE 63, PE 80 and PE 100 raw materials, ensuring excellent strength, flexibility and long service life. Widely used for potable water supply, agriculture irrigation, sewer systems, conduit ducting and industrial piping applications. Their superior flexibility, corrosion resistance and leak-proof performance make them an ideal alternative to conventional piping systems.",
+    image: "/HDPE Pipe.jpg",
+    sizes: "20 mm to 315 mm",
+    standard: "IS 4984",
+    pressureRating: "PN 2.5, 4, 6, 8, 10, 12.5 & 16 kg/cm²",
     types: [
-      "PE 100 High Performance",
-      "PE 80 Standard Utility",
-      "Coiled Pipes (Up to 110mm)",
-      "Straight Lengths (Up to 400mm)",
+      "PE 63 HDPE Pipes",
+      "PE 80 HDPE Pipes",
+      "PE 100 HDPE Pipes",
+      "HDPE ID Pipes",
     ],
     features: [
-      "Butt-fusion welding creates a 100% leak-free, monolithic piping system stronger than the pipe itself",
-      "High ductile flexibility allows laying along curved trenches without requiring numerous elbow fittings",
-      "Trenchless installation (HDD) compatible — minimum surface excavation in urban roads",
-      "Immune to biological corrosion, stress cracking, and aggressive soil conditions",
-      "Superior resistance to abrasive slurry transmission compared to steel pipes",
-      "Black carbon black UV stabilization (>2.5%) for long-term outdoor sunlight exposure",
+      "Excellent flexibility and ductility",
+      "Leak-proof jointing system",
+      "High resistance to corrosion and chemicals",
+      "Suitable for underground installation",
+      "UV stabilized for outdoor applications",
+      "Lightweight and easy to handle",
+      "Long service life with low maintenance",
+      "Environment-friendly and recyclable material",
     ],
     applications: [
-      "Urban and rural pressurized potable water distribution networks",
-      "Underground trunk mains and lift irrigation feeder systems",
-      "Industrial chemical, ash slurry, and hazardous waste disposal lines",
-      "Submarine pipelines and marshland water crossings",
-      "Sewer force mains and stormwater pressure conduits",
+      "Potable Water Supply Systems",
+      "Agricultural Irrigation Networks",
+      "Sewerage and Drainage Systems",
+      "Industrial Fluid Transportation",
+      "Cable Ducting and Conduit Systems",
+      "Ground Drainage Applications",
+      "DWV (Drain, Waste & Vent) Systems",
     ],
     technicalOverview:
-      "Each batch is tested for Melt Flow Rate (MFR), carbon black dispersion, hydrostatic burst pressure at 80°C and 20°C, and elongation at break (>350%). Kevin HDPE pipes deliver safety factor margins that easily exceed Indian and international standards.",
+      "Kevin HDPE Pipes are available in PE 63, PE 80 and PE 100 grades with pressure ratings from PN 2.5 to PN 16 kg/cm². The pipes offer excellent resistance against corrosion, impact, soil movement and seismic activity, ensuring reliable performance in demanding environments.",
     benefits: [
-      "Zero joints on long coil runs (up to 500m per coil)",
-      "Total immunity to galvanic or electrochemical corrosion",
-      "Withstands water freezing inside pipe without rupture",
-      "Lower lifecycle maintenance cost over 50+ operating years",
+      "Corrosion and rust free",
+      "Leak-free performance",
+      "High impact strength",
+      "Flexible and earthquake resistant",
+      "Low installation cost",
+      "Minimal maintenance requirements",
+      "Long operational life",
+      "100% recyclable material",
     ],
     specifications: [
       {
@@ -427,7 +435,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
       "Quick-coupling portable sprinkler piping designed for uniform agricultural crop irrigation.",
     fullDesc:
       "Kevin HDPE Sprinkler Pipes are engineered for maximum portability and rapid field assembly in agricultural fields. Fitted with precision-welded quick-action metal / plastic latch couplers, C-clamps, and silicone seal rings, enabling farmers to move irrigation lines across plots in minutes with zero tool requirement.",
-    image: "HDPE Sprinkler Pipe.jpg",
+    image: "/HDPE Sprinkler Pipe.jpg",
     sizes: "63 mm, 75 mm, 90 mm, 110 mm Outer Diameter (6m Lengths)",
     standard: "IS 14151 (Part 1 & Part 2)",
     pressureRating: "Class 1 (2.5 kgf/cm²) & Class 2 (3.2 kgf/cm²)",
@@ -514,19 +522,19 @@ export const CLIENT_LOGOS = [
     name: "WASMO",
     fullTitle: "Water and Sanitation Management Organisation",
     tag: "Govt. of Gujarat Approved",
-    logo: "/logos/wasmo.png"
+    logo: "/logos/wasmo.png",
   },
   {
     name: "GWSSB",
     fullTitle: "Gujarat Water Supply and Sewerage Board",
     tag: "State Infrastructure Provider",
-    logo: "/logos/GWSSB.jpg"
+    logo: "/logos/GWSSB.jpg",
   },
   {
     name: "GIRDA",
     fullTitle: "Gujarat Industrial Research & Development Agency",
     tag: "Certified Testing Body",
-    logo: "/logos/girda.jpg"
+    logo: "/logos/girda.jpg",
   },
   // {
   //   name: "I-KHEDUT",
@@ -535,8 +543,6 @@ export const CLIENT_LOGOS = [
   //   logo: "/logos/ikhedut.jpg"
   // },
 ];
-
-
 
 export const CERTIFICATIONS = [
   {

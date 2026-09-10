@@ -1,45 +1,63 @@
-import React from 'react';
-import { 
-  Store, 
-  Truck, 
-  CheckCircle2, 
+import React from "react";
+import {
+  Store,
+  Truck,
+  CheckCircle2,
   ExternalLink,
-  ShieldCheck, 
-  Clock, 
-  Building, 
+  ShieldCheck,
+  Clock,
+  Building,
   Award,
   ArrowRight,
-  FileCheck2
-} from 'lucide-react';
+  FileCheck2,
+} from "lucide-react";
 
-const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSftBEjBn9GwCTWa6iYMVRB3JUz_vbqIF72OPK0JIpVHA7bZww/viewform?usp=dialog';
-const GOOGLE_FORM_EMBED_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSftBEjBn9GwCTWa6iYMVRB3JUz_vbqIF72OPK0JIpVHA7bZww/viewform?embedded=true';
+const GOOGLE_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSftBEjBn9GwCTWa6iYMVRB3JUz_vbqIF72OPK0JIpVHA7bZww/viewform?usp=dialog";
+const GOOGLE_FORM_EMBED_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSftBEjBn9GwCTWa6iYMVRB3JUz_vbqIF72OPK0JIpVHA7bZww/viewform?embedded=true";
 
 export const BecomePartnerPage: React.FC = () => {
   const scrollToApply = () => {
-    const applySection = document.getElementById('apply-now-section');
+    const applySection = document.getElementById("apply-now-section");
     if (applySection) {
-      applySection.scrollIntoView({ behavior: 'smooth' });
+      applySection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <div id="become-partner-page-container" className="w-full bg-white text-[#111827]">
-      
+    <div
+      id="become-partner-page-container"
+      className="w-full bg-white text-[#111827]"
+    >
       {/* 1. HERO SECTION */}
-      <section className="bg-[#071B4A] text-white py-14 sm:py-16 lg:py-24 relative overflow-hidden">
+      <section
+        className="text-white py-14 sm:py-16 lg:py-24 relative overflow-hidden bg-cover bg-center"
+        style={{
+          backgroundImage: "url('bg2.png')",
+        }}
+      >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-[#071B4A]/85" />
+
+        {/* Pattern Overlay */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#08A9D6_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none" />
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-[#08A9D6] text-xs font-bold uppercase tracking-wider mb-4 border border-white/10 font-heading">
             <Building className="w-3.5 h-3.5" />
             <span>Commercial Channel Expansion</span>
           </div>
+
           <h1 className="text-[32px] sm:text-4xl lg:text-5xl font-extrabold tracking-tight font-heading text-white leading-tight">
             Become Our Business Partner
           </h1>
+
           <p className="mt-4 text-base sm:text-lg text-sky-100/90 max-w-2xl mx-auto font-light leading-relaxed">
-            Join Kevin PVC Pipe Industries as a Dealer or Distributor and grow with a trusted PVC pipe manufacturer.
+            Join Kevin PVC Pipe Industries as a Dealer or Distributor and grow
+            with a trusted PVC pipe manufacturer.
           </p>
+
           <div className="mt-8 flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 sm:gap-4 w-full max-w-sm sm:max-w-none mx-auto">
             <button
               type="button"
@@ -49,6 +67,7 @@ export const BecomePartnerPage: React.FC = () => {
               <span>Apply Online Now</span>
               <ArrowRight className="w-4 h-4" />
             </button>
+
             <a
               href={GOOGLE_FORM_URL}
               target="_blank"
@@ -65,7 +84,6 @@ export const BecomePartnerPage: React.FC = () => {
       {/* 2. PARTNER OPTIONS: TWO PREMIUM CARDS */}
       <section className="py-14 sm:py-20 bg-[#F3F6F8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
             <span className="text-xs font-bold uppercase tracking-widest text-[#08A9D6] block mb-2 font-heading">
               Partnership Opportunities
@@ -74,14 +92,14 @@ export const BecomePartnerPage: React.FC = () => {
               Choose Your Partnership Track
             </h2>
             <p className="text-gray-600 mt-2 text-base font-normal leading-relaxed">
-              Both dealer and distributor applications are processed quickly through our central application portal.
+              Both dealer and distributor applications are processed quickly
+              through our central application portal.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
-            
             {/* Card 1: Become Dealer */}
-            <div 
+            <div
               id="card-become-dealer"
               className="bg-white rounded-card p-6 sm:p-10 border border-gray-200/80 soft-shadow flex flex-col justify-between hover:border-[#08A9D6] transition-all duration-300"
             >
@@ -99,7 +117,9 @@ export const BecomePartnerPage: React.FC = () => {
                   Become Dealer
                 </h3>
                 <p className="text-base text-gray-600 mb-6 leading-relaxed font-normal">
-                  Join as an authorized Kevin PVC Pipe dealer to supply premium plumbing, agriculture, and casing pipes directly to local contractors, farmers, and residential customers.
+                  Join as an authorized Kevin PVC Pipe dealer to supply premium
+                  plumbing, agriculture, and casing pipes directly to local
+                  contractors, farmers, and residential customers.
                 </p>
 
                 <h4 className="text-xs font-bold uppercase tracking-wider text-[#071B4A] font-heading mb-4">
@@ -109,19 +129,31 @@ export const BecomePartnerPage: React.FC = () => {
                 <ul className="space-y-3 mb-8 text-sm sm:text-base text-gray-700">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#08A9D6] shrink-0 mt-1" />
-                    <span><strong>High Profit Margins:</strong> Competitive retail margins with periodic performance incentives.</span>
+                    <span>
+                      <strong>High Profit Margins:</strong> Competitive retail
+                      margins with periodic performance incentives.
+                    </span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#08A9D6] shrink-0 mt-1" />
-                    <span><strong>Marketing & Display:</strong> Free dealer shop boards, catalogue samples, and brand collaterals.</span>
+                    <span>
+                      <strong>Marketing & Display:</strong> Free dealer shop
+                      boards, catalogue samples, and brand collaterals.
+                    </span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#08A9D6] shrink-0 mt-1" />
-                    <span><strong>Prompt Local Supply:</strong> Fast turnarounds for retail orders with low minimum commitments.</span>
+                    <span>
+                      <strong>Prompt Local Supply:</strong> Fast turnarounds for
+                      retail orders with low minimum commitments.
+                    </span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#08A9D6] shrink-0 mt-1" />
-                    <span><strong>Direct Factory Assurance:</strong> Certified ISI quality standard backing every single pipe.</span>
+                    <span>
+                      <strong>Direct Factory Assurance:</strong> Certified ISI
+                      quality standard backing every single pipe.
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -149,7 +181,7 @@ export const BecomePartnerPage: React.FC = () => {
             </div>
 
             {/* Card 2: Become Distributor */}
-            <div 
+            <div
               id="card-become-distributor"
               className="bg-white rounded-card p-6 sm:p-10 border border-gray-200/80 soft-shadow flex flex-col justify-between hover:border-[#08A9D6] transition-all duration-300"
             >
@@ -167,7 +199,9 @@ export const BecomePartnerPage: React.FC = () => {
                   Become Distributor
                 </h3>
                 <p className="text-base text-gray-600 mb-6 leading-relaxed font-normal">
-                  Become an authorized Kevin distributor for your regional territory or district. Scale with bulk factory pricing, stockholding advantages, and complete commercial backing.
+                  Become an authorized Kevin distributor for your regional
+                  territory or district. Scale with bulk factory pricing,
+                  stockholding advantages, and complete commercial backing.
                 </p>
 
                 <h4 className="text-xs font-bold uppercase tracking-wider text-[#071B4A] font-heading mb-4">
@@ -177,19 +211,32 @@ export const BecomePartnerPage: React.FC = () => {
                 <ul className="space-y-3 mb-8 text-sm sm:text-base text-gray-700">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#08A9D6] shrink-0 mt-1" />
-                    <span><strong>Territory Exclusivity:</strong> Clearly defined geographic distribution territories with zero overlap.</span>
+                    <span>
+                      <strong>Territory Exclusivity:</strong> Clearly defined
+                      geographic distribution territories with zero overlap.
+                    </span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#08A9D6] shrink-0 mt-1" />
-                    <span><strong>Bulk Factory Pricing:</strong> Tier-one volume pricing with quarterly and annual turnover rebates.</span>
+                    <span>
+                      <strong>Bulk Factory Pricing:</strong> Tier-one volume
+                      pricing with quarterly and annual turnover rebates.
+                    </span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#08A9D6] shrink-0 mt-1" />
-                    <span><strong>Priority Factory Dispatch:</strong> Dedicated logistics fleet coordination for container & truck loads.</span>
+                    <span>
+                      <strong>Priority Factory Dispatch:</strong> Dedicated
+                      logistics fleet coordination for container & truck loads.
+                    </span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#08A9D6] shrink-0 mt-1" />
-                    <span><strong>Executive Account Manager:</strong> Dedicated point of contact for ordering, accounts, and tender supply.</span>
+                    <span>
+                      <strong>Executive Account Manager:</strong> Dedicated
+                      point of contact for ordering, accounts, and tender
+                      supply.
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -215,32 +262,35 @@ export const BecomePartnerPage: React.FC = () => {
                 </a>
               </div>
             </div>
-
           </div>
 
           {/* Quick trust reassurance strip */}
           <div className="mt-10 sm:mt-14 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-6 text-center">
             <div className="flex items-center justify-center gap-3 p-4 rounded-xl bg-white border border-gray-200/70">
               <ShieldCheck className="w-5 h-5 text-[#08A9D6]" />
-              <span className="text-xs sm:text-sm font-bold text-[#071B4A]">Official Manufacturer Partner</span>
+              <span className="text-xs sm:text-sm font-bold text-[#071B4A]">
+                Official Manufacturer Partner
+              </span>
             </div>
             <div className="flex items-center justify-center gap-3 p-4 rounded-xl bg-white border border-gray-200/70">
               <Clock className="w-5 h-5 text-[#08A9D6]" />
-              <span className="text-xs sm:text-sm font-bold text-[#071B4A]">Response in 24-48 Hours</span>
+              <span className="text-xs sm:text-sm font-bold text-[#071B4A]">
+                Response in 24-48 Hours
+              </span>
             </div>
             <div className="flex items-center justify-center gap-3 p-4 rounded-xl bg-white border border-gray-200/70">
               <Award className="w-5 h-5 text-[#08A9D6]" />
-              <span className="text-xs sm:text-sm font-bold text-[#071B4A]">100% Certified ISI Quality</span>
+              <span className="text-xs sm:text-sm font-bold text-[#071B4A]">
+                100% Certified ISI Quality
+              </span>
             </div>
           </div>
-
         </div>
       </section>
 
       {/* 3. APPLICATION SECTION (OFFICIAL GOOGLE FORM ONLY) */}
       <section id="apply-now-section" className="py-14 sm:py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          
           <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 text-[#08A9D6] text-xs font-bold uppercase tracking-wider mb-3 border border-sky-100 font-heading">
               <FileCheck2 className="w-4 h-4" />
@@ -250,7 +300,9 @@ export const BecomePartnerPage: React.FC = () => {
               Apply Now
             </h2>
             <p className="mt-3 text-base text-gray-600 leading-relaxed font-normal">
-              We handle all dealership and distributorship onboarding through our official verified Google Form application. Submit your business credentials below or launch the form in a new tab.
+              We handle all dealership and distributorship onboarding through
+              our official verified Google Form application. Submit your
+              business credentials below or launch the form in a new tab.
             </p>
           </div>
 
@@ -262,7 +314,9 @@ export const BecomePartnerPage: React.FC = () => {
                 Official Kevin Partner Application Form
               </h3>
               <p className="text-sm text-sky-100/80 mb-5 max-w-xl font-normal leading-relaxed">
-                Click below to open the complete multi-page partner onboarding form in a dedicated window for an optimal submission experience on any device.
+                Click below to open the complete multi-page partner onboarding
+                form in a dedicated window for an optimal submission experience
+                on any device.
               </p>
               <a
                 id="open-google-form-external-btn"
@@ -275,7 +329,8 @@ export const BecomePartnerPage: React.FC = () => {
                 <ExternalLink className="w-5 h-5" />
               </a>
               <span className="text-xs text-sky-200/70 mt-3 font-normal">
-                Securely hosted by Google Forms • Direct submission to Kevin PVC Pipe Industries
+                Securely hosted by Google Forms • Direct submission to Kevin PVC
+                Pipe Industries
               </span>
             </div>
           </div>
@@ -315,9 +370,9 @@ export const BecomePartnerPage: React.FC = () => {
                 Loading Google Form...
               </iframe>
             </div>
-            
+
             <div className="p-4 bg-gray-50 border-t border-gray-100 text-center text-xs text-gray-500 font-normal">
-              Having trouble viewing or submitting? You can also{' '}
+              Having trouble viewing or submitting? You can also{" "}
               <a
                 href={GOOGLE_FORM_URL}
                 target="_blank"
@@ -325,14 +380,12 @@ export const BecomePartnerPage: React.FC = () => {
                 className="text-[#08A9D6] font-bold hover:underline"
               >
                 click here to open the application directly in Google Forms
-              </a>.
+              </a>
+              .
             </div>
           </div>
-
         </div>
       </section>
-
     </div>
   );
 };
-

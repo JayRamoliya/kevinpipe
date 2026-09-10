@@ -25,7 +25,16 @@ export const AboutPage: React.FC = () => {
   return (
     <div id="about-page-container" className="w-full bg-white text-[#111827]">
       {/* 1. PAGE HEADER / BANNER */}
-      <section className="bg-[#071B4A] text-white py-16 lg:py-20 relative overflow-hidden">
+      <section
+        className="text-white py-16 lg:py-20 relative overflow-hidden bg-cover bg-center"
+        style={{
+          backgroundImage: `url('bg.png')`,
+        }}
+      >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-[#071B4A]/80" />
+
+        {/* Pattern Overlay */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#08A9D6_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -203,6 +212,90 @@ export const AboutPage: React.FC = () => {
         </div>
       </section>
 
+      {/* BSCIC CERTIFICATE SECTION */}
+      <section className="py-14 sm:py-20 bg-[#F3F6F8]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#08A9D6] block mb-2 font-heading">
+              Quality Certification
+            </span>
+
+            <h2 className="text-[26px] sm:text-3xl lg:text-4xl font-extrabold text-[#071B4A] font-heading leading-tight">
+              BSCIC Certification
+            </h2>
+
+            <p className="text-gray-600 mt-2 text-base leading-relaxed">
+              Kevin PVC Pipe Industries operates under a certified quality
+              management system, ensuring consistent manufacturing standards,
+              product quality, and customer satisfaction.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-card border border-gray-100 soft-shadow overflow-hidden">
+            <div className="grid lg:grid-cols-2 gap-0 items-center">
+              {/* Certificate Image */}
+              <div className="p-6 sm:p-8 bg-[#F8FAFC] flex justify-center items-center">
+                <div className="bg-white p-3 rounded-2xl shadow-lg border border-gray-100">
+                  <img
+                    src="BSCIC Certificate.jpg"
+                    alt="BSCIC Certificate"
+                    className="w-full max-w-[320px] object-contain"
+                  />
+                </div>
+              </div>
+
+              {/* Certificate Details */}
+              <div className="p-6 sm:p-8 lg:p-10">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-[#08A9D6] text-xs font-bold uppercase tracking-wider mb-4">
+                  <ShieldCheck className="w-4 h-4" />
+                  Certified Organization
+                </div>
+
+                <h3 className="text-2xl font-bold text-[#071B4A] font-heading mb-4">
+                  ISO Certified Quality Management System
+                </h3>
+
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  The BSCIC certification demonstrates our commitment to
+                  maintaining internationally recognized quality management
+                  standards throughout our manufacturing process.
+                </p>
+
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[#08A9D6] mt-0.5" />
+                    <span className="text-gray-700">
+                      Consistent Product Quality Standards
+                    </span>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[#08A9D6] mt-0.5" />
+                    <span className="text-gray-700">
+                      Systematic Manufacturing Processes
+                    </span>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[#08A9D6] mt-0.5" />
+                    <span className="text-gray-700">
+                      Customer Satisfaction & Continuous Improvement
+                    </span>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[#08A9D6] mt-0.5" />
+                    <span className="text-gray-700">
+                      International Quality Compliance
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 4. CERTIFICATION SECTION */}
       <section className="py-14 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -270,8 +363,12 @@ export const AboutPage: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {/* WASMO */}
             <div className="bg-white rounded-card p-6 sm:p-8 border border-gray-100 soft-shadow text-center flex flex-col items-center">
-              <div className="w-16 h-16 rounded-2xl bg-[#071B4A] text-[#08A9D6] flex items-center justify-center mb-4 font-black text-lg tracking-wider font-heading">
-                WASMO
+              <div className="mb-5">
+                <img
+                  src="/logos/wasmo.png"
+                  alt="WASMO Logo"
+                  className="h-14 w-auto object-contain"
+                />
               </div>
               <h3 className="text-lg font-bold text-[#071B4A] font-heading">
                 WASMO
@@ -291,8 +388,12 @@ export const AboutPage: React.FC = () => {
 
             {/* GWSSB */}
             <div className="bg-white rounded-card p-6 sm:p-8 border border-gray-100 soft-shadow text-center flex flex-col items-center">
-              <div className="w-16 h-16 rounded-2xl bg-[#071B4A] text-[#08A9D6] flex items-center justify-center mb-4 font-black text-lg tracking-wider font-heading">
-                GWSSB
+              <div className="mb-5">
+                <img
+                  src="/logos/GWSSB.jpg"
+                  alt="GWSSB Logo"
+                  className="h-14 w-auto object-contain"
+                />
               </div>
               <h3 className="text-lg font-bold text-[#071B4A] font-heading">
                 GWSSB
@@ -312,8 +413,12 @@ export const AboutPage: React.FC = () => {
 
             {/* GIRDA */}
             <div className="bg-white rounded-card p-6 sm:p-8 border border-gray-100 soft-shadow text-center flex flex-col items-center sm:col-span-2 lg:col-span-1">
-              <div className="w-16 h-16 rounded-2xl bg-[#071B4A] text-[#08A9D6] flex items-center justify-center mb-4 font-black text-lg tracking-wider font-heading">
-                GIRDA
+              <div className="mb-5">
+                <img
+                  src="/logos/girda.jpg"
+                  alt="GIRDA Logo"
+                  className="h-14 w-auto object-contain"
+                />
               </div>
               <h3 className="text-lg font-bold text-[#071B4A] font-heading">
                 GIRDA
@@ -355,8 +460,12 @@ export const AboutPage: React.FC = () => {
             {/* WASMO Approval Card */}
             <div className="rounded-card border-2 border-sky-100 bg-[#F0F9FD] p-6 sm:p-8 soft-shadow relative flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-[#071B4A] text-white flex items-center justify-center mb-4">
-                  <FileCheck2 className="w-6 h-6 text-[#08A9D6]" />
+                <div className="mb-5">
+                  <img
+                    src="/logos/wasmo.png"
+                    alt="WASMO Logo"
+                    className="h-14 w-auto object-contain"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-[#071B4A] font-heading">
                   WASMO Approved
@@ -378,8 +487,12 @@ export const AboutPage: React.FC = () => {
             {/* GWSSB Approval Card */}
             <div className="rounded-card border-2 border-sky-100 bg-[#F0F9FD] p-6 sm:p-8 soft-shadow relative flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-[#071B4A] text-white flex items-center justify-center mb-4">
-                  <FileCheck2 className="w-6 h-6 text-[#08A9D6]" />
+                <div className="mb-5">
+                  <img
+                    src="/logos/GWSSB.jpg"
+                    alt="GWSSB Logo"
+                    className="h-14 w-auto object-contain"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-[#071B4A] font-heading">
                   GWSSB Approved
@@ -401,8 +514,12 @@ export const AboutPage: React.FC = () => {
             {/* I-Khedut Approval Card */}
             <div className="rounded-card border-2 border-sky-100 bg-[#F0F9FD] p-6 sm:p-8 soft-shadow relative flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-[#071B4A] text-white flex items-center justify-center mb-4">
-                  <FileCheck2 className="w-6 h-6 text-[#08A9D6]" />
+                <div className="mb-5">
+                  <img
+                    src="/logos/ikhedut.jpg"
+                    alt="I-Khedut Logo"
+                    className="h-14 w-auto object-contain"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-[#071B4A] font-heading">
                   I-Khedut Approved

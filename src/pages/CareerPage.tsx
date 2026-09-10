@@ -4,7 +4,16 @@ import { ShieldCheck, HeartHandshake, Sparkles } from "lucide-react";
 export const CareerPage: React.FC = () => {
   return (
     <div className="w-full bg-white text-[#111827]">
-      <section className="bg-[#071B4A] text-white py-16 lg:py-20 relative overflow-hidden">
+      <section
+        className="text-white py-16 lg:py-20 relative overflow-hidden bg-cover bg-center"
+        style={{
+          backgroundImage: "url('bg1.png')",
+        }}
+      >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-[#071B4A]/85" />
+
+        {/* Pattern Overlay */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#08A9D6_1px,transparent_1px)] [background-size:20px_20px]" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">

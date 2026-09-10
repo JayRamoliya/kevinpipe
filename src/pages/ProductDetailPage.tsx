@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import { useParams, Link, Navigate } from 'react-router-dom';
-import { 
-  ArrowLeft, 
-  Download, 
-  PhoneCall, 
-  ShieldCheck, 
-  CheckCircle2, 
-  Droplets, 
-  Layers, 
-  ChevronRight, 
+import React, { useState } from "react";
+import { useParams, Link, Navigate } from "react-router-dom";
+import {
+  ArrowLeft,
+  Download,
+  PhoneCall,
+  ShieldCheck,
+  CheckCircle2,
+  Droplets,
+  Layers,
+  ChevronRight,
   FileText,
   Building,
-  Image as ImageIcon
-} from 'lucide-react';
-import { PRODUCTS_DATA } from '../data/products';
+  Image as ImageIcon,
+} from "lucide-react";
+import { PRODUCTS_DATA } from "../data/products";
 
 interface ProductDetailPageProps {
   onOpenQuote: () => void;
@@ -21,10 +21,10 @@ interface ProductDetailPageProps {
   forcedProductId?: string;
 }
 
-export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ 
-  onOpenQuote, 
+export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
+  onOpenQuote,
   onOpenCatalogue,
-  forcedProductId 
+  forcedProductId,
 }) => {
   const { productId: paramProductId } = useParams<{ productId: string }>();
   const activeId = forcedProductId || paramProductId;
@@ -32,7 +32,6 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
   // Find product by id
   const product = PRODUCTS_DATA.find((p) => p.id === activeId);
 
-  // Selected image state for gallery preview
   const [activeImage, setActiveImage] = useState<string | null>(null);
 
   if (!product) {
@@ -42,15 +41,24 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
   const currentHeroImage = activeImage || product.image;
 
   return (
-    <div id={`product-detail-${product.id}`} className="w-full bg-white text-[#111827]">
-      
+    <div
+      id={`product-detail-${product.id}`}
+      className="w-full bg-white text-[#111827]"
+    >
       {/* 1. BREADCRUMB & BACK LINK */}
       <div className="bg-[#F3F6F8] border-b border-gray-200/60 py-3.5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           <div className="flex items-center gap-2 text-xs text-gray-500">
-            <Link to="/" className="hover:text-[#08A9D6] transition-colors">Home</Link>
+            <Link to="/" className="hover:text-[#08A9D6] transition-colors">
+              Home
+            </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <Link to="/products" className="hover:text-[#08A9D6] transition-colors">Products</Link>
+            <Link
+              to="/products"
+              className="hover:text-[#08A9D6] transition-colors"
+            >
+              Products
+            </Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <span className="font-semibold text-[#071B4A]">{product.name}</span>
           </div>
@@ -69,7 +77,6 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
       <section className="py-8 sm:py-12 lg:py-16 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-            
             {/* Left: Large Product Image & Gallery */}
             <div className="lg:col-span-6 space-y-4">
               <div className="relative rounded-card overflow-hidden border border-gray-200 soft-shadow p-2 bg-[#F3F6F8]">
@@ -99,10 +106,16 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                         type="button"
                         onClick={() => setActiveImage(imgUrl)}
                         className={`w-20 h-16 rounded-xl overflow-hidden border-2 shrink-0 transition-all ${
-                          currentHeroImage === imgUrl ? 'border-[#08A9D6] scale-95 shadow-sm' : 'border-gray-200 opacity-70 hover:opacity-100'
+                          currentHeroImage === imgUrl
+                            ? "border-[#08A9D6] scale-95 shadow-sm"
+                            : "border-gray-200 opacity-70 hover:opacity-100"
                         }`}
                       >
-                        <img src={imgUrl} alt={`${product.name} shot ${idx + 1}`} className="w-full h-full object-cover" />
+                        <img
+                          src={imgUrl}
+                          alt={`${product.name} shot ${idx + 1}`}
+                          className="w-full h-full object-cover"
+                        />
                       </button>
                     ))}
                   </div>
@@ -146,26 +159,42 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               {/* Quick Specification Box */}
               <div className="grid grid-cols-2 gap-3 sm:gap-4 bg-[#F3F6F8] p-4 sm:p-5 rounded-2xl border border-gray-100 text-xs">
                 <div>
-                  <span className="text-gray-500 font-medium block">Nominal Sizes:</span>
-                  <span className="font-bold text-[#071B4A] text-sm">{product.sizes}</span>
+                  <span className="text-gray-500 font-medium block">
+                    Nominal Sizes:
+                  </span>
+                  <span className="font-bold text-[#071B4A] text-sm">
+                    {product.sizes}
+                  </span>
                 </div>
                 <div>
-                  <span className="text-gray-500 font-medium block">Pressure Rating:</span>
-                  <span className="font-bold text-[#071B4A] text-sm">{product.pressureRating}</span>
+                  <span className="text-gray-500 font-medium block">
+                    Pressure Rating:
+                  </span>
+                  <span className="font-bold text-[#071B4A] text-sm">
+                    {product.pressureRating}
+                  </span>
                 </div>
                 <div>
-                  <span className="text-gray-500 font-medium block">Quality Standard:</span>
-                  <span className="font-bold text-[#071B4A] text-sm">{product.standard}</span>
+                  <span className="text-gray-500 font-medium block">
+                    Quality Standard:
+                  </span>
+                  <span className="font-bold text-[#071B4A] text-sm">
+                    {product.standard}
+                  </span>
                 </div>
                 <div>
-                  <span className="text-gray-500 font-medium block">Material Base:</span>
-                  <span className="font-bold text-[#071B4A] text-sm">100% Virgin Polymer</span>
+                  <span className="text-gray-500 font-medium block">
+                    Material Base:
+                  </span>
+                  <span className="font-bold text-[#071B4A] text-sm">
+                    100% Virgin Polymer
+                  </span>
                 </div>
               </div>
 
               {/* Action Buttons - Stack full-width on mobile with min-h-[48px] */}
               <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
-                <button
+                {/* <button
                   id="product-detail-quote-btn"
                   type="button"
                   onClick={onOpenQuote}
@@ -173,19 +202,17 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 >
                   <PhoneCall className="w-4 h-4" />
                   <span>Request Instant Quotation</span>
-                </button>
+                </button> */}
 
-                {onOpenCatalogue && (
-                  <button
-                    id="product-download-catalogue-btn"
-                    type="button"
-                    onClick={onOpenCatalogue}
-                    className="w-full sm:w-auto min-h-[48px] py-3.5 px-6 rounded-full bg-white hover:bg-gray-50 text-[#071B4A] text-sm font-bold tracking-wide border border-gray-200 transition-all flex items-center justify-center gap-2 active:scale-95 text-center"
-                  >
-                    <Download className="w-4 h-4 text-[#08A9D6]" />
-                    <span>Download Catalogue</span>
-                  </button>
-                )}
+                <a
+                  href="https://drive.google.com/uc?export=download&id=1XMsaWzQScf-KSeHEsRDxob_bBhiZuheo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="min-h-[48px] inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-full border border-gray-200 text-xs font-bold text-[#071B4A] hover:text-[#08A9D6] hover:border-[#08A9D6] transition-colors"
+                >
+                  <Download className="w-4 h-4 text-[#08A9D6]" />
+                  <span>Download Brochure</span>
+                </a>
 
                 <Link
                   to="/contact"
@@ -194,9 +221,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   <span>Contact Sales Desk</span>
                 </Link>
               </div>
-
             </div>
-
           </div>
         </div>
       </section>
@@ -205,7 +230,6 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
       <section className="py-14 sm:py-16 bg-[#F3F6F8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10">
-            
             {/* Key Features */}
             <div className="lg:col-span-6 bg-white rounded-card p-6 sm:p-8 border border-gray-100 soft-shadow">
               <span className="text-xs font-bold uppercase tracking-widest text-[#08A9D6] block mb-2 font-heading">
@@ -258,7 +282,10 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     {product.benefits.map((benefit, idx) => (
-                      <div key={idx} className="p-3 rounded-xl bg-[#F3F6F8] text-xs text-gray-700 font-semibold flex items-center gap-2">
+                      <div
+                        key={idx}
+                        className="p-3 rounded-xl bg-[#F3F6F8] text-xs text-gray-700 font-semibold flex items-center gap-2"
+                      >
                         <span className="w-1.5 h-1.5 rounded-full bg-[#08A9D6]" />
                         <span>{benefit}</span>
                       </div>
@@ -267,7 +294,6 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 </div>
               )}
             </div>
-
           </div>
         </div>
       </section>
@@ -295,7 +321,6 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
       {product.specifications && product.specifications.length > 0 && (
         <section className="py-14 sm:py-16 bg-white border-t border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
             <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
               <span className="text-xs font-bold uppercase tracking-widest text-[#08A9D6] block mb-2 font-heading">
                 Engineering Dimensions
@@ -304,7 +329,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 Specification Table ({product.standard})
               </h3>
               <p className="text-xs sm:text-sm text-gray-500 mt-1 font-normal">
-                Standard dimension ratios, wall thickness tolerances, and rated working pressures.
+                Standard dimension ratios, wall thickness tolerances, and rated
+                working pressures.
               </p>
               <p className="sm:hidden text-[11px] text-[#08A9D6] font-semibold mt-2">
                 ← Swipe horizontally to see all specifications →
@@ -315,24 +341,48 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[600px]">
                 <thead>
                   <tr className="bg-[#071B4A] text-white font-heading text-xs font-bold uppercase tracking-wider">
-                    <th className="py-3 px-3 sm:px-6 whitespace-nowrap">Nominal Size</th>
-                    <th className="py-3 px-3 sm:px-6 whitespace-nowrap">Pressure Class</th>
-                    <th className="py-3 px-3 sm:px-6 whitespace-nowrap">Outer Diameter (OD)</th>
-                    <th className="py-3 px-3 sm:px-6 whitespace-nowrap">Wall Thickness</th>
-                    <th className="py-3 px-3 sm:px-6 whitespace-nowrap">Working Pressure</th>
+                    <th className="py-3 px-3 sm:px-6 whitespace-nowrap">
+                      Nominal Size
+                    </th>
+                    <th className="py-3 px-3 sm:px-6 whitespace-nowrap">
+                      Pressure Class
+                    </th>
+                    <th className="py-3 px-3 sm:px-6 whitespace-nowrap">
+                      Outer Diameter (OD)
+                    </th>
+                    <th className="py-3 px-3 sm:px-6 whitespace-nowrap">
+                      Wall Thickness
+                    </th>
+                    <th className="py-3 px-3 sm:px-6 whitespace-nowrap">
+                      Working Pressure
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100 bg-white">
                   {product.specifications.map((row, idx) => (
-                    <tr 
+                    <tr
                       key={idx}
-                      className={idx % 2 === 0 ? 'bg-white hover:bg-sky-50/50 transition-colors' : 'bg-gray-50/60 hover:bg-sky-50/50 transition-colors'}
+                      className={
+                        idx % 2 === 0
+                          ? "bg-white hover:bg-sky-50/50 transition-colors"
+                          : "bg-gray-50/60 hover:bg-sky-50/50 transition-colors"
+                      }
                     >
-                      <td className="py-3 px-3 sm:px-6 font-bold text-[#071B4A] whitespace-nowrap">{row.size}</td>
-                      <td className="py-3 px-3 sm:px-6 text-gray-700 whitespace-nowrap">{row.classRating}</td>
-                      <td className="py-3 px-3 sm:px-6 text-gray-700 whitespace-nowrap">{row.outerDiameter}</td>
-                      <td className="py-3 px-3 sm:px-6 text-gray-700 whitespace-nowrap">{row.wallThickness}</td>
-                      <td className="py-3 px-3 sm:px-6 font-medium text-[#08A9D6] whitespace-nowrap">{row.workingPressure}</td>
+                      <td className="py-3 px-3 sm:px-6 font-bold text-[#071B4A] whitespace-nowrap">
+                        {row.size}
+                      </td>
+                      <td className="py-3 px-3 sm:px-6 text-gray-700 whitespace-nowrap">
+                        {row.classRating}
+                      </td>
+                      <td className="py-3 px-3 sm:px-6 text-gray-700 whitespace-nowrap">
+                        {row.outerDiameter}
+                      </td>
+                      <td className="py-3 px-3 sm:px-6 text-gray-700 whitespace-nowrap">
+                        {row.wallThickness}
+                      </td>
+                      <td className="py-3 px-3 sm:px-6 font-medium text-[#08A9D6] whitespace-nowrap">
+                        {row.workingPressure}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -340,9 +390,9 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
             </div>
 
             <p className="text-[11px] text-gray-400 mt-3 text-right">
-              * Custom wall thickness and special lengths available for project tenders upon request.
+              * Custom wall thickness and special lengths available for project
+              tenders upon request.
             </p>
-
           </div>
         </section>
       )}
@@ -354,7 +404,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
             Need Bulk Consignment or Dealer Pricing for {product.name}?
           </h3>
           <p className="text-sm text-sky-100/80 max-w-xl mx-auto font-normal leading-relaxed">
-            Our plant dispatch department provides full logistics coordination across Gujarat, Maharashtra, Rajasthan, and Madhya Pradesh.
+            Our plant dispatch department provides full logistics coordination
+            across Gujarat, Maharashtra, Rajasthan, and Madhya Pradesh.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 sm:gap-4 w-full max-w-md mx-auto sm:max-w-none">
             <button
@@ -373,7 +424,6 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
           </div>
         </div>
       </section>
-
     </div>
   );
 };
