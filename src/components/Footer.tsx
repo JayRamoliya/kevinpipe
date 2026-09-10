@@ -1,44 +1,55 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Globe, Droplets, Facebook, Instagram, Linkedin, ArrowRight } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Globe,
+  Droplets,
+  Facebook,
+  Instagram,
+  Linkedin,
+  ArrowRight,
+} from "lucide-react";
 
 export const Footer: React.FC = () => {
   const quickLinks = [
-    { label: 'Home', to: '/' },
-    { label: 'About', to: '/about' },
-    { label: 'Products', to: '/products' },
-    { label: 'Become Partner', to: '/become-partner' },
-    { label: 'Career', to: '/career' },
-    { label: 'Contact', to: '/contact' },
+    { label: "Home", to: "/" },
+    { label: "About", to: "/about" },
+    { label: "Products", to: "/products" },
+    { label: "Become Partner", to: "/become-partner" },
+    { label: "Career", to: "/career" },
+    { label: "Contact", to: "/contact" },
   ];
 
   const productLinks = [
-    { label: 'uPVC Pressure Pipe', to: '/products/upvc-pressure-pipe' },
-    { label: 'uPVC Column Pipe', to: '/products/upvc-column-pipe' },
-    { label: 'uPVC Casing Pipe', to: '/products/upvc-casing-pipe' },
-    { label: 'HDPE Pipe', to: '/products/hdpe-pipe' },
-    { label: 'HDPE Sprinkler Pipe', to: '/products/hdpe-sprinkler-pipe' },
+    { label: "uPVC Pressure Pipe", to: "/products/upvc-pressure-pipe" },
+    { label: "uPVC Column Pipe", to: "/products/upvc-column-pipe" },
+    { label: "uPVC Casing Pipe", to: "/products/upvc-casing-pipe" },
+    { label: "HDPE Pipe", to: "/products/hdpe-pipe" },
+    { label: "HDPE Sprinkler Pipe", to: "/products/hdpe-sprinkler-pipe" },
   ];
 
   return (
-    <footer id="main-footer" className="bg-[#071B4A] text-white border-t border-[#0b245e]">
+    <footer
+      id="main-footer"
+      className="bg-[#071B4A] text-white border-t border-[#0b245e]"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-14 border-b border-white/10">
-          
           {/* Brand Column (Col 1-4) */}
           <div className="lg:col-span-4">
-            <Link to="/" className="flex items-center gap-3 mb-4 group">
-              <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#08A9D6] group-hover:scale-105 transition-transform">
-                <Droplets className="w-6 h-6 stroke-[2.2]" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-extrabold tracking-tight text-white font-heading">
-                  KEVIN
-                </span>
-                <span className="text-[10px] font-semibold tracking-widest text-[#08A9D6] uppercase">
-                  PVC PIPE INDUSTRIES
-                </span>
-              </div>
+            <Link
+              id="brand-logo-link"
+              to="/"
+              className="flex items-center shrink-0"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <img
+                src="/logo.png"
+                alt="Kevin PVC Pipe Industries"
+                className="h-10 sm:h-14 w-auto object-contain"
+              />
             </Link>
 
             <p className="text-sm font-medium text-white/90 leading-relaxed mb-3">
@@ -46,7 +57,9 @@ export const Footer: React.FC = () => {
             </p>
 
             <p className="text-xs text-sky-100/70 leading-relaxed mb-6">
-              Premier manufacturer of ISI-certified uPVC pressure pipes, deep-well column pipes, casing pipes, and HDPE sprinkler piping solutions delivering dependable water infrastructure across India.
+              Premier manufacturer of ISI-certified uPVC pressure pipes,
+              deep-well column pipes, casing pipes, and HDPE sprinkler piping
+              solutions delivering dependable water infrastructure across India.
             </p>
 
             {/* Social Connect Icons */}
@@ -56,7 +69,7 @@ export const Footer: React.FC = () => {
               </span>
               <div className="flex items-center gap-3">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/people/Kevin-Pipes/61576287503107/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Facebook"
@@ -65,7 +78,7 @@ export const Footer: React.FC = () => {
                   <Facebook className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/kevin_pipes_/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Instagram"
@@ -74,22 +87,13 @@ export const Footer: React.FC = () => {
                   <Instagram className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/kevin-pipe-industries/home/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn"
                   className="w-9 h-9 rounded-lg bg-white/10 hover:bg-[#08A9D6] text-white flex items-center justify-center transition-colors"
                 >
                   <Linkedin className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://www.kevinpvcpipe.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Official Website"
-                  className="w-9 h-9 rounded-lg bg-white/10 hover:bg-[#08A9D6] text-white flex items-center justify-center transition-colors"
-                >
-                  <Globe className="w-4 h-4" />
                 </a>
               </div>
             </div>
@@ -145,8 +149,10 @@ export const Footer: React.FC = () => {
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#08A9D6] shrink-0 mt-1" />
                 <address className="not-italic leading-relaxed text-xs">
-                  At. Rajkot-Bhavnagar Highway,<br />
-                  Untvad, Tal. Babra,<br />
+                  At. Rajkot-Bhavnagar Highway,
+                  <br />
+                  Untvad, Tal. Babra,
+                  <br />
                   Dist. Amreli, Gujarat, India.
                 </address>
               </div>
@@ -172,7 +178,6 @@ export const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-
         </div>
 
         {/* Bottom Bar: Copyright */}
@@ -181,14 +186,27 @@ export const Footer: React.FC = () => {
             © 2026 Kevin PVC Pipe Industries. All Rights Reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center sm:justify-end gap-x-6 gap-y-2">
-            <Link to="/about" className="hover:text-white transition-colors py-1">Quality Policy</Link>
-            <Link to="/contact" className="hover:text-white transition-colors py-1">Plant Location</Link>
-            <Link to="/become-partner" className="hover:text-white transition-colors py-1">Dealer Network</Link>
+            <Link
+              to="/about"
+              className="hover:text-white transition-colors py-1"
+            >
+              Quality Policy
+            </Link>
+            <Link
+              to="/contact"
+              className="hover:text-white transition-colors py-1"
+            >
+              Plant Location
+            </Link>
+            <Link
+              to="/become-partner"
+              className="hover:text-white transition-colors py-1"
+            >
+              Dealer Network
+            </Link>
           </div>
         </div>
-
       </div>
     </footer>
   );
 };
-

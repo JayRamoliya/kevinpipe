@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, PhoneCall, Droplets, ArrowRight } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { Menu, X, PhoneCall, Droplets, ArrowRight } from "lucide-react";
 
 interface HeaderProps {
   onOpenQuote: () => void;
@@ -18,62 +18,60 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuote }) => {
   // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [mobileMenuOpen]);
 
   const navLinks = [
-    { label: 'Home', to: '/' },
-    { label: 'About', to: '/about' },
-    { label: 'Products', to: '/products' },
-    { label: 'Become Partner', to: '/become-partner' },
-    { label: 'Career', to: '/career' },
-    { label: 'Contact', to: '/contact' },
+    { label: "Home", to: "/" },
+    { label: "About", to: "/about" },
+    // { label: "Products", to: "/products" },
+    // { label: "Become Partner", to: "/become-partner" },
+    // { label: "Career", to: "/career" },
+    // { label: "Contact", to: "/contact" },
   ];
 
   return (
-    <header id="main-header" className="w-full bg-white border-b border-gray-100 sticky top-0 z-40 shadow-xs">
+    <header
+      id="main-header"
+      className="w-full bg-white border-b border-gray-100 sticky top-0 z-40 shadow-xs"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 sm:h-20">
-          
-          {/* Logo / Wordmark (Always visible, responsive sizing) */}
           <Link
             id="brand-logo-link"
             to="/"
-            className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none shrink-0"
+            className="flex items-center shrink-0"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#071B4A] flex items-center justify-center text-[#08A9D6] shadow-sm group-hover:scale-105 transition-transform shrink-0">
-              <Droplets className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-base sm:text-xl font-extrabold tracking-tight text-[#071B4A] leading-tight">
-                KEVIN
-              </span>
-              <span className="text-[9px] sm:text-[11px] font-semibold tracking-widest text-gray-500 uppercase">
-                PVC PIPE INDUSTRIES
-              </span>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Kevin PVC Pipe Industries"
+              className="h-10 sm:h-14 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop & Large Tablet Navigation (Compact spacing on lg, relaxed on xl) */}
-          <nav id="desktop-navigation" className="hidden lg:flex items-center space-x-5 xl:space-x-7">
+          <nav
+            id="desktop-navigation"
+            className="hidden lg:flex items-center space-x-5 xl:space-x-7"
+          >
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
-                id={`nav-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                id={`nav-link-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
                 to={link.to}
-                end={link.to === '/'}
+                end={link.to === "/"}
                 className={({ isActive }) =>
                   `text-sm font-semibold transition-colors py-1.5 relative ${
                     isActive
-                      ? 'text-[#08A9D6] font-bold after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#08A9D6] after:rounded-full'
-                      : 'text-[#111827] hover:text-[#08A9D6]'
+                      ? "text-[#08A9D6] font-bold after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#08A9D6] after:rounded-full"
+                      : "text-[#111827] hover:text-[#08A9D6]"
                   }`
                 }
               >
@@ -92,14 +90,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuote }) => {
               <PhoneCall className="w-3.5 h-3.5 text-[#08A9D6]" />
               <span>+91 99253 73353</span>
             </a>
-            <button
+            {/* <button
               id="header-get-quote-btn"
               type="button"
               onClick={onOpenQuote}
               className="min-h-[44px] px-6 py-2.5 rounded-full bg-[#08A9D6] hover:bg-[#0796be] text-white text-sm font-bold tracking-wide shadow-sm hover:shadow transition-all focus:outline-none focus:ring-2 focus:ring-[#08A9D6] focus:ring-offset-2 active:scale-95"
             >
               Get Quote
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile & Tablet (< lg) Header Controls */}
@@ -117,10 +115,18 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuote }) => {
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="min-h-[44px] min-w-[44px] p-2 rounded-xl text-[#071B4A] hover:bg-gray-100 flex items-center justify-center focus:outline-none transition-colors"
-              aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-label={
+                mobileMenuOpen
+                  ? "Close navigation menu"
+                  : "Open navigation menu"
+              }
               aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -140,15 +146,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuote }) => {
               {navLinks.map((link) => (
                 <NavLink
                   key={link.to}
-                  id={`mobile-nav-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                  id={`mobile-nav-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
                   to={link.to}
-                  end={link.to === '/'}
+                  end={link.to === "/"}
                   onClick={() => setMobileMenuOpen(false)}
                   className={({ isActive }) =>
                     `min-h-[48px] flex items-center justify-between text-base font-semibold px-4 rounded-xl transition-colors ${
                       isActive
-                        ? 'bg-sky-50 text-[#08A9D6] font-bold border border-sky-100'
-                        : 'text-[#111827] hover:bg-gray-50 active:bg-gray-100'
+                        ? "bg-sky-50 text-[#08A9D6] font-bold border border-sky-100"
+                        : "text-[#111827] hover:bg-gray-50 active:bg-gray-100"
                     }`
                   }
                 >
@@ -190,5 +196,3 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuote }) => {
     </header>
   );
 };
-
-
