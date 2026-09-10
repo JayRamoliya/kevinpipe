@@ -18,43 +18,175 @@ export const RIGID_IMAGE = "/src/assets/images/rigid_pipes_1788956067400.jpg";
 
 export const PRODUCTS_DATA: ProductItem[] = [
   {
-    id: "upvc-pressure-pipe",
-    name: "uPVC Pressure Pipe",
+    id: "upvc-ringfit-pipe",
+
+    name: "uPVC Ringfit Pipe",
+
     shortDesc:
-      "High-strength pressure piping for potable water supply, agriculture and industrial conveyance.",
+      "Leak-proof elastomeric rubber ring joint pipes designed for fast installation and reliable water distribution networks.",
+
     fullDesc:
-      "Kevin uPVC Pressure Pipes are manufactured from 100% virgin unplasticized polyvinyl chloride compound. Engineered to deliver exceptional durability, zero scale formation, high hydraulic efficiency (Hazen-Williams C=150), and prolonged service life exceeding 50 years. Available in both solvent-cement plain socket and leak-proof elastomeric ring-fit joint configurations.",
-    image: PRESSURE_IMAGE,
-    sizes: "20 mm to 315 mm Outer Diameter",
+      "Kevin uPVC Ringfit Pipes are manufactured from premium virgin uPVC compound and equipped with high-quality elastomeric rubber sealing rings for superior leak-proof performance. Designed for pressurized water supply systems, irrigation networks, municipal pipelines, and rural drinking water projects, these pipes offer quick push-fit installation, excellent hydraulic efficiency, and long-lasting durability. The Ringfit joint absorbs ground movement and minor alignment variations, making it ideal for large-scale underground pipeline projects.",
+
+    image: '/uPVC Ringfit Pipe.jpg',
+
+    sizes: "63 mm to 315 mm Outer Diameter",
+
     standard: "IS 4985:2021 / ISO 1452",
-    pressureRating: "Class 1 to Class 6 (2.5 kgf/cm² to 16.0 kgf/cm²)",
+
+    pressureRating: "Class 2 to Class 6 (4 kgf/cm² to 16 kgf/cm²)",
+
     types: [
-      "Plain Socket Pipe (Solvent Cement)",
-      "Ringfit Pipe (Elastomeric Rubber Seal)",
+      "Elastomeric Rubber Ring Joint Pipe",
+      "Push-Fit Ringfit Water Supply Pipe",
     ],
+
     features: [
-      "Ultra-smooth mirror interior walls significantly lower pumping head loss and electricity costs",
-      "100% lead-free, non-toxic, and odorless for completely safe drinking water delivery",
-      "Immune to electrolytic, chemical, and soil acid/alkali corrosion",
-      "Dual jointing choice: Quick Ringfit push-fit or strong solvent cement welding",
-      "High tensile and burst resistance against fluid water-hammer surges",
-      "UV stabilized for prolonged durability in outdoor and semi-exposed conditions",
+      "Pre-installed EPDM elastomeric rubber ring ensures leak-proof joints",
+      "Push-fit jointing enables faster installation than conventional systems",
+      "Accommodates minor ground settlement and pipeline movement",
+      "Excellent resistance to corrosion, chemicals, and soil acidity",
+      "Smooth internal surface provides superior flow efficiency",
+      "UV stabilized formulation for enhanced outdoor durability",
+      "Maintenance-free operation with long service life",
     ],
+
     applications: [
-      "Municipal and urban drinking water supply trunk lines",
-      "Rural drinking water gravity and pump networks (Jal Jeevan Mission / WASMO schemes)",
-      "Agricultural flood, lift, and drip irrigation mainlines & sub-mains",
-      "Industrial chemical, treated effluent, and process water handling",
-      "Commercial building water risers and distribution loops",
+      "Municipal water supply distribution networks",
+      "Jal Jeevan Mission and rural water supply schemes",
+      "Underground drinking water transmission pipelines",
+      "Agricultural irrigation and lift irrigation projects",
+      "Industrial process and utility water systems",
+      "Infrastructure and government pipeline projects",
     ],
+
     technicalOverview:
-      "Conforming strictly to IS 4985:2021 specifications, our uPVC pressure pipes undergo stringent in-house tests including short-term hydrostatic burst tests, resistance to dichloromethane at specified temperature, reversible longitudinal reversion, and impact strength. Plain socket variants are optimized for solvent cement welding forming a homogeneous fusion, while Ring-fit variants feature pre-installed reinforced rubber gaskets for rapid trench laying.",
+      "Kevin uPVC Ringfit Pipes are manufactured according to IS 4985:2021 specifications and undergo rigorous quality testing including hydrostatic pressure testing, impact resistance, dimensional verification, gasket performance evaluation, and long-term durability assessments. The integrated elastomeric sealing ring creates a flexible yet watertight joint, significantly reducing installation time while ensuring dependable performance throughout the pipeline's service life.",
+
     benefits: [
-      "50+ Years proven service lifespan",
-      "Up to 30% lower friction loss than metal conduits",
-      "Zero bacteriological growth and no tuberculation",
-      "Fast laying speed reducing contractor labor expenses",
+      "50+ years expected service life",
+      "100% leak-proof rubber ring sealing system",
+      "Faster trench laying and installation",
+      "Lower maintenance and operating costs",
+      "Suitable for long-distance underground pipelines",
+      "Excellent hydraulic efficiency with reduced pressure loss",
     ],
+
+    specifications: [
+      {
+        size: '63 mm (2")',
+        classRating: "Class 2 / 3 (4 / 6 kgf/cm²)",
+        outerDiameter: "63.0 - 63.3 mm",
+        wallThickness: "2.0 - 3.0 mm",
+        workingPressure: "0.4 - 0.6 MPa",
+      },
+      {
+        size: '75 mm (2-1/2")',
+        classRating: "Class 2 / 3 (4 / 6 kgf/cm²)",
+        outerDiameter: "75.0 - 75.3 mm",
+        wallThickness: "2.3 - 3.6 mm",
+        workingPressure: "0.4 - 0.6 MPa",
+      },
+      {
+        size: '90 mm (3")',
+        classRating: "Class 2 / 3 (4 / 6 kgf/cm²)",
+        outerDiameter: "90.0 - 90.3 mm",
+        wallThickness: "2.8 - 4.3 mm",
+        workingPressure: "0.4 - 0.6 MPa",
+      },
+      {
+        size: '110 mm (4")',
+        classRating: "Class 2 / 3 / 4 (4 / 6 / 10 kgf/cm²)",
+        outerDiameter: "110.0 - 110.4 mm",
+        wallThickness: "3.4 - 6.6 mm",
+        workingPressure: "0.4 - 1.0 MPa",
+      },
+      {
+        size: '160 mm (6")',
+        classRating: "Class 2 / 3 / 4 (4 / 6 / 10 kgf/cm²)",
+        outerDiameter: "160.0 - 160.5 mm",
+        wallThickness: "4.9 - 9.5 mm",
+        workingPressure: "0.4 - 1.0 MPa",
+      },
+      {
+        size: '200 mm (8")',
+        classRating: "Class 2 / 3 / 4 (4 / 6 / 10 kgf/cm²)",
+        outerDiameter: "200.0 - 200.6 mm",
+        wallThickness: "6.2 - 11.9 mm",
+        workingPressure: "0.4 - 1.0 MPa",
+      },
+      {
+        size: '250 mm (10")',
+        classRating: "Class 2 / 3 / 4 (4 / 6 / 10 kgf/cm²)",
+        outerDiameter: "250.0 - 250.7 mm",
+        wallThickness: "7.7 - 14.8 mm",
+        workingPressure: "0.4 - 1.0 MPa",
+      },
+      {
+        size: '315 mm (12")',
+        classRating: "Class 2 / 3 / 4 (4 / 6 / 10 kgf/cm²)",
+        outerDiameter: "315.0 - 315.9 mm",
+        wallThickness: "9.7 - 18.7 mm",
+        workingPressure: "0.4 - 1.0 MPa",
+      },
+    ],
+
+    gallery: [PRESSURE_IMAGE, RING_FIT_IMAGE, FACTORY_IMAGE, LAB_IMAGE],
+  },
+  {
+    id: "upvc-agri-plain-socket-pipe",
+
+    name: "uPVC Agri Plain Socket Pipe",
+
+    shortDesc:
+      "Reliable and cost-effective agricultural piping solution for irrigation, water distribution, and farm water management systems.",
+
+    fullDesc:
+      "Kevin uPVC Agri Plain Socket Pipes are manufactured using premium virgin uPVC compound and engineered specifically for agricultural water conveyance applications. Designed for superior hydraulic performance, lightweight handling, corrosion resistance, and long service life, these pipes provide an economical solution for irrigation networks, borewell connections, farm water supply lines, and rural water distribution systems. The plain socket design ensures strong solvent cement jointing, delivering leak-proof performance and long-term reliability in demanding agricultural environments.",
+
+    image: "/uPVC Agri Plain Socket Pipe.jpg",
+
+    sizes: "20 mm to 315 mm Outer Diameter",
+
+    standard: "IS 4985:2021",
+
+    pressureRating: "Class 1 to Class 6 (2.5 kgf/cm² to 16.0 kgf/cm²)",
+
+    types: [
+      "Plain Socket Pipe (Solvent Cement Joint)",
+      "Agricultural Water Supply Pipe",
+    ],
+
+    features: [
+      "Ultra-smooth inner surface minimizes friction losses and improves water flow efficiency",
+      "Lightweight construction enables easy transportation, handling, and installation",
+      "Corrosion-proof and resistant to fertilizers, chemicals, and soil contaminants",
+      "Strong solvent cement joints provide leak-free and durable pipeline systems",
+      "UV-stabilized formulation ensures longer outdoor service life",
+      "Excellent impact strength and resistance to cracking under field conditions",
+    ],
+
+    applications: [
+      "Agricultural irrigation systems",
+      "Borewell and submersible pump delivery lines",
+      "Farm water distribution networks",
+      "Sprinkler irrigation systems",
+      "Drip irrigation mainlines and sub-mains",
+      "Rural water supply projects and agricultural infrastructure",
+    ],
+
+    technicalOverview:
+      "Manufactured in compliance with IS 4985:2021, Kevin uPVC Agri Plain Socket Pipes undergo stringent quality inspections including dimensional accuracy testing, hydrostatic pressure testing, impact resistance evaluation, and long-term performance verification. The solvent cement plain socket jointing system creates a secure and durable connection, ensuring reliable operation across agricultural and irrigation applications.",
+
+    benefits: [
+      "50+ years expected service life",
+      "Lower pumping costs due to superior flow characteristics",
+      "Leak-proof solvent welded joints",
+      "Rust-free and maintenance-free operation",
+      "Quick installation reducing labor costs",
+      "Economical alternative to conventional metal pipelines",
+    ],
+
     specifications: [
       {
         size: '20 mm (1/2")',
@@ -73,7 +205,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
       {
         size: '32 mm (1")',
         classRating: "Class 3 (6 kgf/cm²)",
-        outerDiameter: "32.0 - 25.3 mm",
+        outerDiameter: "32.0 - 32.3 mm",
         wallThickness: "1.8 - 2.2 mm",
         workingPressure: "0.6 MPa",
       },
@@ -127,6 +259,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
         workingPressure: "0.4 - 1.0 MPa",
       },
     ],
+
     gallery: [PRESSURE_IMAGE, RING_FIT_IMAGE, FACTORY_IMAGE, LAB_IMAGE],
   },
   {
@@ -136,7 +269,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
       "Heavy-duty submersible pump riser pipe engineered to support high tensile loads.",
     fullDesc:
       "Kevin uPVC Column Pipes are specifically developed as the ultimate replacement for conventional galvanized iron (GI) riser pipes used in deep borewells. Equipped with CNC-machined square threads and bi-axial orientation, they withstand immense hydraulic pressure, pump vibrations, and column deadweight without joint unthreading or stretching.",
-    image: COLUMN_IMAGE,
+    image: "/uPVC Column Pipe.jpg",
     sizes: '25 mm (1") to 150 mm (6") Nominal Bore',
     standard: "IS 12818 / ASTM D1785",
     pressureRating: "Medium, Standard, Heavy & Super Heavy (Up to 35 kg/cm²)",

@@ -1,8 +1,3 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Header } from './components/Header';
@@ -78,11 +73,21 @@ export default function App() {
 
             {/* Explicit Individual Product Routes matching user specifications */}
             <Route 
-              path="/products/upvc-pressure-pipe" 
+              path="/products/upvc-ringfit-pipe" 
               element={
                 <ProductDetailPage 
-                  forcedProductId="upvc-pressure-pipe"
-                  onOpenQuote={() => handleOpenQuote('uPVC Pressure Pipe')}
+                  forcedProductId="upvc-ringfit-pipe"
+                  onOpenQuote={() => handleOpenQuote('uPVC Ringfit Pipe')}
+                  onOpenCatalogue={() => setIsCatalogueOpen(true)}
+                />
+              } 
+            />
+            <Route 
+              path="/products/upvc-agri-plain-socket-pipe" 
+              element={
+                <ProductDetailPage 
+                  forcedProductId="upvc-agri-plain-socket-pipe"
+                  onOpenQuote={() => handleOpenQuote('uPVC Agri Plain Socket Pipe')}
                   onOpenCatalogue={() => setIsCatalogueOpen(true)}
                 />
               } 

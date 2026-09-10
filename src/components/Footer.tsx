@@ -23,7 +23,8 @@ export const Footer: React.FC = () => {
   ];
 
   const productLinks = [
-    { label: "uPVC Pressure Pipe", to: "/products/upvc-pressure-pipe" },
+    { label: "uPVC Ringfit Pipe", to: "/products/upvc-ringfit-pipe" },
+    { label: "uPVC Agri Plain Socket Pipe", to: "/products/upvc-agri-plain-socket-pipe" },
     { label: "uPVC Column Pipe", to: "/products/upvc-column-pipe" },
     { label: "uPVC Casing Pipe", to: "/products/upvc-casing-pipe" },
     { label: "HDPE Pipe", to: "/products/hdpe-pipe" },

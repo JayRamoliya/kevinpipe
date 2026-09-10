@@ -42,8 +42,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuote }) => {
       to: "/products",
       children: [
         { label: "uPVC Casing Pipe", to: "/products/upvc-casing-pipe" },
+        { label: "uPVC Ringfit Pipe", to: "/products/upvc-ringfit-pipe" },
+        { label: "uPVC Agri Plain Socket Pipe", to: "/products/upvc-agri-plain-socket-pipe" },
         { label: "uPVC Column Pipe", to: "/products/upvc-column-pipe" },
-        { label: "uPVC Pressure Pipe", to: "/products/upvc-pressure-pipe" },
         { label: "HDPE Pipe", to: "/products/hdpe-pipe" },
         { label: "HDPE Sprinkler Pipe", to: "/products/hdpe-sprinkler-pipe" },
       ],
