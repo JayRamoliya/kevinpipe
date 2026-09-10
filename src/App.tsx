@@ -14,6 +14,7 @@ import { CatalogueModal } from './components/CatalogueModal';
 // Pages
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
+import { ClientsPage } from './pages/ClientsPage';
 import { ProductsPage } from './pages/ProductsPage';
 import { ProductDetailPage } from './pages/ProductDetailPage';
 import { BecomePartnerPage } from './pages/BecomePartnerPage';
@@ -58,6 +59,10 @@ export default function App() {
             <Route 
               path="/about" 
               element={<AboutPage />} 
+            />
+            <Route 
+              path="/clients" 
+              element={<ClientsPage />} 
             />
 
             {/* Products Overview */}

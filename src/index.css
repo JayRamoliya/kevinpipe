@@ -45,3 +45,21 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     display: none !important;
   }
 }
+
+
+
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* IE & Edge */
+* {
+  -ms-overflow-style: none;
+}
