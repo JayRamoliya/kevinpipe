@@ -178,7 +178,6 @@ export default function App() {
           defaultProduct={selectedProductForQuote}
         />
 
-        {/* Brochure / Catalogue Download Modal */}
         <CatalogueModal
           isOpen={isCatalogueOpen}
           onClose={() => setIsCatalogueOpen(false)}

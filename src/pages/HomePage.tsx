@@ -429,42 +429,111 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* ----------------- 5. OUR CLIENTS PREVIEW ----------------- */}
-      <section
-        id="clients-preview-section"
-        className="py-14 sm:py-16 bg-white border-b border-gray-100"
-      >
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#08A9D6] block mb-2 font-heading">
-              Trusted Certifications
+          <div className="text-center mb-14">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#08A9D6]">
+              Our Clients
+            </span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-[#071B4A]">
+              Trusted By Leading Organizations
+            </h2>
+            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+              Kevin PVC Pipe Industries proudly supplies high-quality piping
+              solutions to government bodies, rural water supply projects and
+              infrastructure organizations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {["/logos/wasmo.png", "/logos/GWSSB.jpg", "/logos/girda.jpg"].map(
+              (logo, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-3xl border border-gray-100 p-8 flex items-center justify-center"
+                >
+                  <img
+                    src={logo}
+                    alt="Approval Logo"
+                    className="h-24 object-contain"
+                  />
+                </div>
+              ),
+            )}
+          </div>
+        </div>
+      </section> */}
+
+      <section className="py-20 bg-[#F3F6F8]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#08A9D6]">
+              Government Approvals
             </span>
 
-            <h2 className="text-[24px] sm:text-2xl lg:text-3xl font-extrabold text-[#071B4A] font-heading">
-              Certifications & Recognition
+            <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-[#071B4A]">
+              Approved & Registered Supplier
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-            {[
-              "/logos/BIS.webp",
-              "/logos/wasmo.png",
-              "/logos/GWSSB.jpg",
-              "/logos/girda.jpg",
-              "/logos/ikhedut.jpg",
-              "/logos/BSCIC.png",
-              "/logos/ISI.jpg",
-            ].map((logo, index) => (
-              <div
-                key={index}
-                className="bg-[#F3F6F8] rounded-card p-5 sm:p-6 border border-gray-100 soft-shadow hover:bg-white hover:border-sky-200 transition-all flex items-center justify-center min-h-[140px]"
-              >
-                <img
-                  src={logo}
-                  alt="Certification Logo"
-                  className="max-h-24 sm:max-h-28 w-auto object-contain transition-all duration-300"
-                />
-              </div>
-            ))}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {["/logos/wasmo.png", "/logos/GWSSB.jpg", "/logos/ikhedut.jpg"].map(
+              (logo, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-3xl border border-gray-100 p-8 flex items-center justify-center"
+                >
+                  <img
+                    src={logo}
+                    alt="Approval Logo"
+                    className="h-24 object-contain"
+                  />
+                </div>
+              ),
+            )}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-6">
+            <div className="bg-[#071B4A] text-white rounded-3xl p-8 text-center">
+              <h3 className="text-4xl font-extrabold">13+</h3>
+              <p className="mt-2 text-sky-100">Years of Excellence</p>
+            </div>
+
+            <div className="bg-[#071B4A] text-white rounded-3xl p-8 text-center">
+              <h3 className="text-4xl font-extrabold">500+</h3>
+              <p className="mt-2 text-sky-100">Dealer Network</p>
+            </div>
+
+            <div className="bg-[#071B4A] text-white rounded-3xl p-8 text-center">
+              <h3 className="text-4xl font-extrabold">100+</h3>
+              <p className="mt-2 text-sky-100">Government Projects</p>
+            </div>
+
+            <div className="bg-[#071B4A] text-white rounded-3xl p-8 text-center">
+              <h3 className="text-4xl font-extrabold">1M+</h3>
+              <p className="mt-2 text-sky-100">Meters Pipes Supplied</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[#071B4A]">
+        <div className="max-w-5xl mx-auto px-4 text-center">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
+            Trusted Across Gujarat
+          </h2>
+
+          <p className="mt-8 text-xl text-sky-100 leading-relaxed">
+            "Kevin PVC Pipe Industries has consistently delivered quality
+            products meeting government project standards and timelines."
+          </p>
+
+          <div className="mt-6 text-[#08A9D6] font-bold">
+            Government Infrastructure Project Team
           </div>
         </div>
       </section>
@@ -542,16 +611,15 @@ export const HomePage: React.FC<HomePageProps> = ({
                 >
                   View Quality Certifications
                 </Link>
-                {onOpenCatalogue && (
-                  <button
-                    type="button"
-                    onClick={onOpenCatalogue}
-                    className="min-h-[48px] inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-full border border-gray-200 text-xs font-bold text-[#071B4A] hover:text-[#08A9D6] hover:border-[#08A9D6] transition-colors"
-                  >
-                    <Download className="w-4 h-4 text-[#08A9D6]" />
-                    <span>Download Brochure</span>
-                  </button>
-                )}
+                <a
+                  href="https://drive.google.com/uc?export=download&id=1XMsaWzQScf-KSeHEsRDxob_bBhiZuheo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="min-h-[48px] inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-full border border-gray-200 text-xs font-bold text-[#071B4A] hover:text-[#08A9D6] hover:border-[#08A9D6] transition-colors"
+                >
+                  <Download className="w-4 h-4 text-[#08A9D6]" />
+                  <span>Download Brochure</span>
+                </a>
               </div>
             </div>
 

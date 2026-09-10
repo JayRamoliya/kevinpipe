@@ -528,12 +528,12 @@ export const CLIENT_LOGOS = [
     tag: "Certified Testing Body",
     logo: "/logos/girda.jpg"
   },
-  {
-    name: "I-KHEDUT",
-    fullTitle: "Department of Agriculture & Farmers Welfare, Gujarat",
-    tag: "Approved Subsidy Vendor",
-    logo: "/logos/ikhedut.jpg"
-  },
+  // {
+  //   name: "I-KHEDUT",
+  //   fullTitle: "Department of Agriculture & Farmers Welfare, Gujarat",
+  //   tag: "Approved Subsidy Vendor",
+  //   logo: "/logos/ikhedut.jpg"
+  // },
 ];
 
 
