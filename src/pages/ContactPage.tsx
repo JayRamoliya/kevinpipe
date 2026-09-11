@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Send, 
-  CheckCircle2, 
-  Building2, 
-  Globe, 
+import React, { useState } from "react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Send,
+  CheckCircle2,
+  Building2,
+  Globe,
   ShieldCheck,
-  Factory
-} from 'lucide-react';
-import { ContactFormData } from '../types';
+  Factory,
+} from "lucide-react";
+import { ContactFormData } from "../types";
 
 export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
-    name: '',
-    mobile: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    mobile: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -27,16 +27,27 @@ export const ContactPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-    }, 750);
+
+    const whatsappNumber = "919925373353";
+
+    const text = `Hello,
+Name: ${formData.name}
+Mobile: ${formData.mobile}
+Email: ${formData.email}
+Subject: ${formData.subject}
+
+Message:
+${formData.message}`;
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      text,
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
     <div id="contact-page-container" className="w-full bg-white text-[#111827]">
-      
       {/* 1. HERO BANNER */}
       <section className="bg-[#071B4A] text-white py-16 lg:py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#08A9D6_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none" />
@@ -48,7 +59,8 @@ export const ContactPage: React.FC = () => {
             Contact Kevin PVC Pipe Industries
           </h1>
           <p className="mt-4 text-base sm:text-lg text-sky-100/80 max-w-2xl mx-auto font-light leading-relaxed">
-            Get in touch with our technical sales division, factory dispatch team, or dealer management desk for prompt service.
+            Get in touch with our technical sales division, factory dispatch
+            team, or dealer management desk for prompt service.
           </p>
         </div>
       </section>
@@ -57,10 +69,8 @@ export const ContactPage: React.FC = () => {
       <section className="py-14 sm:py-20 bg-[#F3F6F8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-            
             {/* Left: Contact Information Cards */}
             <div className="lg:col-span-5 space-y-6">
-              
               <div className="bg-white rounded-card p-6 sm:p-8 border border-gray-100 soft-shadow space-y-6">
                 <div>
                   <span className="text-xs font-bold uppercase tracking-widest text-[#08A9D6] block mb-1 font-heading">
@@ -72,17 +82,20 @@ export const ContactPage: React.FC = () => {
                 </div>
 
                 <div className="space-y-5 sm:space-y-6 text-sm">
-                  
                   {/* Address */}
                   <div className="flex items-start gap-3.5 sm:gap-4">
                     <div className="w-11 h-11 rounded-2xl bg-sky-50 text-[#08A9D6] flex items-center justify-center shrink-0">
                       <MapPin className="w-5 h-5 stroke-[2.2]" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#071B4A] font-heading text-sm sm:text-base">Factory & Headquarters</h3>
+                      <h3 className="font-bold text-[#071B4A] font-heading text-sm sm:text-base">
+                        Factory & Headquarters
+                      </h3>
                       <address className="not-italic text-gray-600 mt-1 leading-relaxed text-xs sm:text-sm font-normal">
-                        KEVIN PVC PIPE INDUSTRIES<br />
-                        At. Rajkot-Bhavnagar Highway,<br />
+                        KEVIN PVC PIPE INDUSTRIES
+                        <br />
+                        At. Rajkot-Bhavnagar Highway,
+                        <br />
                         Untvad, Gujarat - 365421, India.
                       </address>
                     </div>
@@ -94,10 +107,12 @@ export const ContactPage: React.FC = () => {
                       <Phone className="w-5 h-5 stroke-[2.2]" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#071B4A] font-heading text-sm sm:text-base">Direct Phone & WhatsApp</h3>
+                      <h3 className="font-bold text-[#071B4A] font-heading text-sm sm:text-base">
+                        Direct Phone & WhatsApp
+                      </h3>
                       <p className="mt-1">
-                        <a 
-                          href="tel:+919925373353" 
+                        <a
+                          href="tel:+919925373353"
                           className="font-bold text-[#071B4A] hover:text-[#08A9D6] transition-colors text-base"
                         >
                           +91 99253 73353
@@ -112,10 +127,12 @@ export const ContactPage: React.FC = () => {
                       <Mail className="w-5 h-5 stroke-[2.2]" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#071B4A] font-heading text-sm sm:text-base">Email Inquiries</h3>
+                      <h3 className="font-bold text-[#071B4A] font-heading text-sm sm:text-base">
+                        Email Inquiries
+                      </h3>
                       <p className="mt-1">
-                        <a 
-                          href="mailto:info@kevinpvcpipe.com" 
+                        <a
+                          href="mailto:info@kevinpvcpipe.com"
                           className="font-semibold text-gray-700 hover:text-[#08A9D6] transition-colors text-xs sm:text-sm"
                         >
                           info@kevinpvcpipe.com
@@ -130,14 +147,18 @@ export const ContactPage: React.FC = () => {
                       <Clock className="w-5 h-5 stroke-[2.2]" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#071B4A] font-heading text-sm sm:text-base">Operating Hours</h3>
-                      <p className="text-xs text-gray-600 mt-1 font-normal">Monday – Sunday: 8:00 AM – 8:00 PM</p>
-                      <p className="text-xs text-gray-500 font-normal">Factory Dispatch: 24/7 Loading Operations</p>
+                      <h3 className="font-bold text-[#071B4A] font-heading text-sm sm:text-base">
+                        Operating Hours
+                      </h3>
+                      <p className="text-xs text-gray-600 mt-1 font-normal">
+                        Monday – Sunday: 8:00 AM – 8:00 PM
+                      </p>
+                      <p className="text-xs text-gray-500 font-normal">
+                        Factory Dispatch: 24/7 Loading Operations
+                      </p>
                     </div>
                   </div>
-
                 </div>
-
               </div>
 
               <div className="bg-[#071B4A] rounded-card p-5 sm:p-6 text-white soft-shadow flex items-center gap-4">
@@ -145,17 +166,20 @@ export const ContactPage: React.FC = () => {
                   <Factory className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold font-heading text-white">Direct Plant Loading</h4>
-                  <p className="text-xs text-sky-100/80 mt-0.5 font-normal">Prompt weighbridge verification & computerized dispatch invoices.</p>
+                  <h4 className="text-sm font-bold font-heading text-white">
+                    Direct Plant Loading
+                  </h4>
+                  <p className="text-xs text-sky-100/80 mt-0.5 font-normal">
+                    Prompt weighbridge verification & computerized dispatch
+                    invoices.
+                  </p>
                 </div>
               </div>
-
             </div>
 
             {/* Right: Contact Form */}
             <div className="lg:col-span-7">
               <div className="bg-white rounded-card p-6 sm:p-10 lg:p-12 border border-gray-100 soft-shadow">
-                
                 <div className="mb-6 sm:mb-8">
                   <span className="text-xs font-bold uppercase tracking-widest text-[#08A9D6] block mb-1 font-heading">
                     Send Us A Message
@@ -164,7 +188,8 @@ export const ContactPage: React.FC = () => {
                     Let's Discuss Your Project
                   </h2>
                   <p className="text-sm sm:text-base text-gray-600 mt-1 font-normal leading-relaxed">
-                    Fill out the form below and our team will get back to you with product technical data and custom rates.
+                    Fill out the form below and our team will get back to you
+                    with product technical data and custom rates.
                   </p>
                 </div>
 
@@ -177,18 +202,21 @@ export const ContactPage: React.FC = () => {
                       Message Sent Successfully!
                     </h3>
                     <p className="text-base text-gray-600 max-w-md mx-auto font-normal leading-relaxed">
-                      Thank you for contacting us, <strong>{formData.name}</strong>. A technical sales representative will respond to your email or call your number ({formData.mobile}) shortly.
+                      Thank you for contacting us,{" "}
+                      <strong>{formData.name}</strong>. A technical sales
+                      representative will respond to your email or call your
+                      number ({formData.mobile}) shortly.
                     </p>
                     <button
                       type="button"
                       onClick={() => {
                         setSubmitted(false);
                         setFormData({
-                          name: '',
-                          mobile: '',
-                          email: '',
-                          subject: '',
-                          message: ''
+                          name: "",
+                          mobile: "",
+                          email: "",
+                          subject: "",
+                          message: "",
                         });
                       }}
                       className="w-full sm:w-auto min-h-[48px] px-8 py-3 rounded-full bg-[#071B4A] text-white text-sm font-bold active:scale-95 transition-all"
@@ -197,8 +225,10 @@ export const ContactPage: React.FC = () => {
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
-                    
+                  <form
+                    onSubmit={handleSubmit}
+                    className="space-y-4 sm:space-y-5"
+                  >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                       <div>
                         <label className="block text-xs font-bold text-gray-700 mb-1.5 uppercase tracking-wider">
@@ -209,7 +239,9 @@ export const ContactPage: React.FC = () => {
                           required
                           placeholder="e.g. Nilesh Patel"
                           value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({ ...formData, name: e.target.value })
+                          }
                           className="w-full min-h-[48px] px-4 py-3 rounded-xl border border-gray-300 bg-[#F3F6F8]/40 text-base focus:outline-none focus:ring-2 focus:ring-[#08A9D6] focus:border-transparent transition-all"
                         />
                       </div>
@@ -223,7 +255,9 @@ export const ContactPage: React.FC = () => {
                           required
                           placeholder="e.g. +91 99253 73353"
                           value={formData.mobile}
-                          onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({ ...formData, mobile: e.target.value })
+                          }
                           className="w-full min-h-[48px] px-4 py-3 rounded-xl border border-gray-300 bg-[#F3F6F8]/40 text-base focus:outline-none focus:ring-2 focus:ring-[#08A9D6] focus:border-transparent transition-all"
                         />
                       </div>
@@ -239,7 +273,9 @@ export const ContactPage: React.FC = () => {
                           required
                           placeholder="e.g. nilesh@example.com"
                           value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({ ...formData, email: e.target.value })
+                          }
                           className="w-full min-h-[48px] px-4 py-3 rounded-xl border border-gray-300 bg-[#F3F6F8]/40 text-base focus:outline-none focus:ring-2 focus:ring-[#08A9D6] focus:border-transparent transition-all"
                         />
                       </div>
@@ -253,7 +289,12 @@ export const ContactPage: React.FC = () => {
                           required
                           placeholder="e.g. uPVC Column Pipe Quotation"
                           value={formData.subject}
-                          onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              subject: e.target.value,
+                            })
+                          }
                           className="w-full min-h-[48px] px-4 py-3 rounded-xl border border-gray-300 bg-[#F3F6F8]/40 text-base focus:outline-none focus:ring-2 focus:ring-[#08A9D6] focus:border-transparent transition-all"
                         />
                       </div>
@@ -268,7 +309,9 @@ export const ContactPage: React.FC = () => {
                         required
                         placeholder="Please describe pipe sizes, expected length / quantity, application, and destination city..."
                         value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, message: e.target.value })
+                        }
                         className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-[#F3F6F8]/40 text-base focus:outline-none focus:ring-2 focus:ring-[#08A9D6] focus:border-transparent transition-all"
                       />
                     </div>
@@ -281,23 +324,23 @@ export const ContactPage: React.FC = () => {
                         className="w-full sm:w-auto min-h-[48px] px-10 py-3.5 rounded-full bg-[#08A9D6] hover:bg-[#0796be] text-white font-bold text-base tracking-wide shadow-lg shadow-sky-500/20 transition-all flex items-center justify-center gap-2 active:scale-95 disabled:opacity-50"
                       >
                         <Send className="w-4 h-4" />
-                        <span>{isSubmitting ? 'Transmitting Message...' : 'Send Message'}</span>
+                        <span>
+                          {isSubmitting
+                            ? "Transmitting Message..."
+                            : "Send Message"}
+                        </span>
                       </button>
                     </div>
-
                   </form>
                 )}
-
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
       <section className="py-14 sm:py-16 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 sm:mb-8">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#08A9D6] block font-heading">
@@ -307,7 +350,8 @@ export const ContactPage: React.FC = () => {
                 Factory & Plant Location
               </h3>
               <p className="text-xs sm:text-sm text-gray-500 mt-1 font-normal">
-                Located conveniently on the major transport arterial: Rajkot-Bhavnagar Highway, Babra, Amreli.
+                Located conveniently on the major transport arterial:
+                Rajkot-Bhavnagar Highway, Babra, Amreli.
               </p>
             </div>
 
@@ -338,17 +382,20 @@ export const ContactPage: React.FC = () => {
 
             {/* Overlaid Plant Information Tag */}
             <div className="absolute bottom-3 left-3 right-3 sm:right-auto sm:bottom-4 sm:left-4 bg-[#071B4A]/90 backdrop-blur-md text-white p-3.5 sm:p-4 rounded-2xl border border-white/10 shadow-lg text-xs max-w-sm">
-              <p className="font-bold text-sm text-[#08A9D6]">KEVIN PVC PIPE INDUSTRIES</p>
-              <p className="text-gray-300 mt-0.5 text-[11px] sm:text-xs">Untvad, Rajkot-Bhavnagar Highway, Tal. Babra, Dist. Amreli, Gujarat</p>
+              <p className="font-bold text-sm text-[#08A9D6]">
+                KEVIN PVC PIPE INDUSTRIES
+              </p>
+              <p className="text-gray-300 mt-0.5 text-[11px] sm:text-xs">
+                Untvad, Rajkot-Bhavnagar Highway, Tal. Babra, Dist. Amreli,
+                Gujarat
+              </p>
               <p className="text-[11px] text-sky-200 mt-1.5 flex items-center gap-1.5 font-semibold">
                 <Phone className="w-3 h-3" /> +91 99253 73353
               </p>
             </div>
           </div>
-
         </div>
       </section>
-
     </div>
   );
 };

@@ -3,18 +3,8 @@ import { ProductItem } from "../types";
 export const HERO_IMAGE = "/src/assets/images/hero_pvc_pipes_1788955947955.jpg";
 export const FACTORY_IMAGE =
   "/src/assets/images/factory_plant_1788955961208.jpg";
-export const CASING_IMAGE = "/src/assets/images/casing_pipe_1789007729995.jpg";
 export const OWNER_IMAGE = "/src/assets/images/owner_profile_1789007742209.jpg";
-export const LAB_IMAGE = "/src/assets/images/quality_lab_1789007758299.jpg";
-export const COLUMN_IMAGE = "/src/assets/images/column_pipes_1788955979749.jpg";
-export const PRESSURE_IMAGE =
-  "/src/assets/images/pressure_pipes_1788955991931.jpg";
-export const HDPE_IMAGE = "/src/assets/images/hdpe_pipes_1788956003394.jpg";
-export const SPRINKLER_IMAGE =
-  "/src/assets/images/sprinkler_pipes_1788956033623.jpg";
-export const RING_FIT_IMAGE =
-  "/src/assets/images/ring_fit_pipes_1788956021664.jpg";
-export const RIGID_IMAGE = "/src/assets/images/rigid_pipes_1788956067400.jpg";
+
 
 export const PRODUCTS_DATA: ProductItem[] = [
   {

@@ -14,9 +14,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import {
-  FACTORY_IMAGE,
   OWNER_IMAGE,
-  LAB_IMAGE,
   CLIENT_LOGOS,
   CERTIFICATIONS,
 } from "../data/products";

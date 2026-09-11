@@ -13,9 +13,6 @@ import {
   Download,
 } from "lucide-react";
 import {
-  HERO_IMAGE,
-  FACTORY_IMAGE,
-  LAB_IMAGE,
   PRODUCTS_DATA,
   CLIENT_LOGOS,
   CERTIFICATIONS,
@@ -627,7 +624,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             <div className="lg:col-span-6">
               <div className="relative rounded-card overflow-hidden border border-gray-200 soft-shadow p-2 bg-[#F3F6F8]">
                 <img
-                  src={LAB_IMAGE}
+                  src='/bg2.png'
                   alt="Precision Hydrostatic Testing Laboratory"
                   className="w-full h-[260px] sm:h-[360px] lg:h-[400px] object-cover rounded-[18px]"
                 />
