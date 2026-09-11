@@ -15,6 +15,7 @@ import { ProductDetailPage } from './pages/ProductDetailPage';
 import { BecomePartnerPage } from './pages/BecomePartnerPage';
 import { CareerPage } from './pages/CareerPage';
 import { ContactPage } from './pages/ContactPage';
+import { QualityTesting } from './pages/QualityTesting';
 
 export default function App() {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
@@ -58,6 +59,10 @@ export default function App() {
             <Route 
               path="/clients" 
               element={<ClientsPage />} 
+            />
+            <Route 
+              path="/quality-testing" 
+              element={<QualityTesting />} 
             />
 
             {/* Products Overview */}

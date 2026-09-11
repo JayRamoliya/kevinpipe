@@ -28,7 +28,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuote }) => {
     };
   }, [mobileMenuOpen]);
 
-  const navLinks = [
+  const dnavLinks = [
     { label: "Home", to: "/" },
 
     {
@@ -56,6 +56,35 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuote }) => {
     { label: "Contact", to: "/contact" },
   ];
 
+  const mnavLinks = [
+    { label: "Home", to: "/" },
+
+    {
+      label: "About Us",
+      to: "/about",
+      children: [{ label: "Clients", to: "/clients" }],
+    },
+
+    {
+      label: "Products",
+      to: "/products",
+      children: [
+        { label: "uPVC Casing Pipe", to: "/products/upvc-casing-pipe" },
+        { label: "uPVC Ringfit Pipe", to: "/products/upvc-ringfit-pipe" },
+        {
+          label: "uPVC Agri Plain Socket Pipe",
+          to: "/products/upvc-agri-plain-socket-pipe",
+        },
+        { label: "uPVC Column Pipe", to: "/products/upvc-column-pipe" },
+        { label: "HDPE Pipe", to: "/products/hdpe-pipe" },
+        { label: "HDPE Sprinkler Pipe", to: "/products/hdpe-sprinkler-pipe" },
+      ],
+    },
+    { label: "Become Dealer/Distributor ", to: "/become-partner" },
+    { label: "Quality Testing", to: "/quality-testing" },
+    { label: "Contact", to: "/contact" },
+  ];
+
   return (
     <header
       id="main-header"
@@ -77,7 +106,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuote }) => {
           </Link>
 
           <nav className="hidden lg:flex items-center gap-7">
-            {navLinks.map((item) =>
+            {dnavLinks.map((item) =>
               item.children ? (
                 <div key={item.label} className="relative group">
                   <Link
@@ -209,7 +238,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuote }) => {
               Navigation Menu
             </p>
             <nav className="flex flex-col space-y-1.5">
-              {navLinks.map((item) =>
+              {mnavLinks.map((item) =>
                 item.children ? (
                   <div key={item.label} className="border-b border-gray-100">
                     <div className="flex items-center">
