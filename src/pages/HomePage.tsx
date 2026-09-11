@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   ArrowRight,
   ShieldCheck,
@@ -12,11 +13,7 @@ import {
   ChevronRight,
   Download,
 } from "lucide-react";
-import {
-  PRODUCTS_DATA,
-  CLIENT_LOGOS,
-  CERTIFICATIONS,
-} from "../data/products";
+import { PRODUCTS_DATA, CLIENT_LOGOS, CERTIFICATIONS } from "../data/products";
 
 interface HomePageProps {
   onOpenQuote: () => void;
@@ -29,40 +26,109 @@ export const HomePage: React.FC<HomePageProps> = ({
 }) => {
   return (
     <div id="home-page-container" className="w-full bg-white text-[#111827]">
-      {/* ----------------- 1. HERO SECTION ----------------- */}
       <section
         id="hero-section"
         className="relative overflow-hidden bg-[#071B4A] text-white pt-10 pb-16 sm:pt-14 sm:pb-20 lg:pt-20 lg:pb-28"
       >
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#08A9D6_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+        <motion.div
+          animate={{ y: [0, -15, 0] }}
+          transition={{
+            duration: 1.8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute inset-0 opacity-10 bg-[radial-gradient(#08A9D6_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"
+        />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
-            <div className="order-2 lg:order-1 lg:col-span-6 space-y-5 sm:space-y-6 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-sky-200 border border-white/10 text-xs font-semibold tracking-wide max-w-full truncate">
+            {/* Left Content */}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {},
+                visible: {
+                  transition: {
+                    staggerChildren: 0.12,
+                  },
+                },
+              }}
+              className="order-2 lg:order-1 lg:col-span-6 space-y-5 sm:space-y-6 text-center lg:text-left"
+            >
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.8 },
+                  },
+                }}
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-sky-200 border border-white/10 text-xs font-semibold tracking-wide max-w-full truncate"
+              >
                 <ShieldCheck className="w-4 h-4 text-[#08A9D6] shrink-0" />
                 <span className="truncate">
                   ISO 9001:2008 Certified PVC, uPVC & HDPE Pipe Manufacturer
                 </span>
-              </div>
+              </motion.div>
 
-              <h1 className="text-[32px] sm:text-4xl md:text-5xl lg:text-5xl font-extrabold tracking-tight leading-[1.18] text-white font-heading">
+              <motion.h1
+                initial={{
+                  opacity: 0,
+                  y: 80,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 1.4,
+                  delay: 0.3,
+                }}
+                className="text-[32px] sm:text-4xl md:text-5xl lg:text-5xl font-extrabold tracking-tight leading-[1.18] text-white font-heading"
+              >
                 Strong Pipes.
                 <br className="hidden sm:inline" />
-                <span className="text-[#08A9D6]">
-                  {" "}
-                  Trusted Water Solutions.
-                </span>
-              </h1>
+                <span className="text-[#08A9D6]">Trusted Water Solutions.</span>
+              </motion.h1>
 
-              <p className="text-base sm:text-lg text-sky-100/80 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+              <motion.p
+                initial={{
+                  opacity: 0,
+                  y: 80,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 1.4,
+                  delay: 0.3,
+                }}
+                className="text-base sm:text-lg text-sky-100/80 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light"
+              >
                 KEVIN PVC PIPE manufactures premium-quality uPVC, PVC and HDPE
                 pipes engineered for agriculture, borewell, plumbing and
                 industrial applications. Built with superior raw materials for
                 long-lasting performance and reliable water flow.
-              </p>
+              </motion.p>
 
-              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3.5 sm:gap-4 w-full sm:w-auto">
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 50,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 1.4,
+                  delay: 0.9,
+                }}
+                className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3.5 sm:gap-4 w-full sm:w-auto"
+              >
                 <Link
                   id="hero-explore-products-btn"
                   to="/products"
@@ -80,9 +146,19 @@ export const HomePage: React.FC<HomePageProps> = ({
                 >
                   <span>Get Quote</span>
                 </button>
-              </div>
+              </motion.div>
 
-              <div className="pt-6 border-t border-white/10 grid grid-cols-3 gap-2 sm:gap-4 text-center lg:text-left">
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 50 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 1.2 },
+                  },
+                }}
+                className="pt-6 border-t border-white/10 grid grid-cols-3 gap-2 sm:gap-4 text-center lg:text-left"
+              >
                 <div className="p-2">
                   <p className="text-xl sm:text-2xl font-black text-white font-heading">
                     ISO
@@ -109,34 +185,40 @@ export const HomePage: React.FC<HomePageProps> = ({
                     Irrigation Systems
                   </p>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
+            {/* Right Image */}
             <div className="order-1 lg:order-2 lg:col-span-6 w-full">
               <div className="relative mx-auto max-w-lg lg:max-w-none">
-                <div className="relative rounded-card overflow-hidden bg-white/5 border border-white/15 soft-shadow p-2">
-                  <img
-                    src='hero-1.jpg'
+                <motion.div
+                  initial={{
+                    opacity: 0,
+                    scale: 1.25,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    scale: 1,
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="relative rounded-card overflow-hidden bg-white/5 border border-white/15 soft-shadow p-2"
+                >
+                  <motion.img
+                    src="hero-1.jpg"
                     alt="KEVIN PVC Pipe Manufacturing"
-                    className="w-full h-[260px] sm:h-[360px] lg:h-[440px] object-cover rounded-[18px]"
                     loading="eager"
+                    whileHover={{
+                      scale: 1.04,
+                    }}
+                    transition={{
+                      duration: 0.6,
+                    }}
+                    className="w-full h-[260px] sm:h-[360px] lg:h-[440px] object-cover rounded-[18px]"
                   />
-
-                  {/* <div className="absolute bottom-4 left-4 right-4 sm:right-auto bg-[#071B4A]/90 backdrop-blur-md border border-white/15 rounded-2xl p-3 sm:p-4 text-white shadow-xl flex items-center gap-3">
-                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#08A9D6] flex items-center justify-center shrink-0">
-                      <Droplets className="w-5 h-5 text-white" />
-                    </div>
-
-                    <div>
-                      <p className="text-[10px] sm:text-xs uppercase tracking-wider text-sky-200 font-bold">
-                        Premium Manufacturing
-                      </p>
-                      <p className="text-xs sm:text-sm font-semibold text-white">
-                        uPVC, PVC & HDPE Pipes for Every Application
-                      </p>
-                    </div>
-                  </div> */}
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -624,7 +706,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             <div className="lg:col-span-6">
               <div className="relative rounded-card overflow-hidden border border-gray-200 soft-shadow p-2 bg-[#F3F6F8]">
                 <img
-                  src='/bg2.png'
+                  src="/bg2.png"
                   alt="Precision Hydrostatic Testing Laboratory"
                   className="w-full h-[260px] sm:h-[360px] lg:h-[400px] object-cover rounded-[18px]"
                 />
