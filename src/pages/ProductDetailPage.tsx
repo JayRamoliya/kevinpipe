@@ -205,7 +205,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 </button> */}
 
                 <a
-                  href="https://drive.google.com/uc?export=download&id=1XMsaWzQScf-KSeHEsRDxob_bBhiZuheo"
+                  href="https://drive.google.com/file/d/1WQcgMPVAsU5vwlJXhhLtya9ocvylHU8L/view?usp=drivesdk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="min-h-[48px] inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-full border border-gray-200 text-xs font-bold text-[#071B4A] hover:text-[#08A9D6] hover:border-[#08A9D6] transition-colors"
