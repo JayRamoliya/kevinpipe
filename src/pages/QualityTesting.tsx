@@ -165,71 +165,69 @@ export const QualityTesting: React.FC = () => {
         </div>
       </section>
 
-      {/* ABOUT TESTING */}
       <section className="py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-5">
-              <div className="relative rounded-3xl overflow-hidden border border-gray-100 p-2 bg-[#F3F6F8]">
-                <img
-                  src="quality-lab.webp"
-                  alt="Quality Testing Lab"
-                  className="w-full h-[420px] object-contain rounded-[20px]"
-                />
+          {/* Content Top */}
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="text-[#08A9D6] text-xs uppercase font-bold tracking-widest">
+              Quality Control
+            </span>
 
-                <div className="absolute bottom-6 left-6 right-6 bg-[#071B4A]/90 rounded-2xl p-4 text-white">
-                  <p className="text-[#08A9D6] text-xs uppercase font-bold tracking-wider">
-                    Testing Excellence
-                  </p>
+            <h2 className="mt-3 text-3xl lg:text-4xl font-extrabold text-[#071B4A]">
+              Quality Tested. Performance Proven.
+            </h2>
 
-                  <p className="text-sm mt-1">
-                    Advanced Laboratory & Inspection Facility
-                  </p>
-                </div>
-              </div>
+            <p className="mt-5 text-gray-600 leading-relaxed">
+              Our quality control laboratory continuously monitors raw
+              materials, manufacturing processes and finished products. Every
+              batch is subjected to comprehensive testing before approval and
+              dispatch.
+            </p>
+
+            <p className="mt-4 text-gray-600 leading-relaxed">
+              With advanced testing equipment and experienced quality
+              professionals, we ensure compliance with BIS, ISO and internal
+              quality standards.
+            </p>
+          </div>
+
+          {/* Images Bottom */}
+          <div className="grid md:grid-cols-2 gap-6 mt-12">
+            <div className="relative overflow-hidden rounded-3xl">
+              <img
+                src="lab1.jpg"
+                alt="Quality Testing Lab"
+                className="w-full h-[350px] lg:h-[420px] object-cover"
+              />
             </div>
 
-            <div className="lg:col-span-7">
-              <span className="text-[#08A9D6] text-xs uppercase font-bold tracking-widest">
-                Quality Control
-              </span>
+            <div className="relative overflow-hidden rounded-3xl">
+              <img
+                src="lab2.jpg"
+                alt="Pipe Quality Testing"
+                className="w-full h-[350px] lg:h-[420px] object-cover"
+              />
+            </div>
+          </div>
 
-              <h2 className="mt-3 text-3xl lg:text-4xl font-extrabold text-[#071B4A]">
-                Quality Tested. Performance Proven.
-              </h2>
+          {/* Mission & Standard */}
+          <div className="grid sm:grid-cols-2 gap-4 mt-10">
+            <div className="bg-[#F3F6F8] rounded-2xl p-6">
+              <h4 className="font-bold text-[#071B4A]">Our Mission</h4>
 
-              <p className="mt-5 text-gray-600 leading-relaxed">
-                Our quality control laboratory continuously monitors raw
-                materials, manufacturing processes and finished products. Every
-                batch is subjected to comprehensive testing before approval and
-                dispatch.
+              <p className="text-sm text-gray-600 mt-2">
+                Deliver reliable piping solutions through strict quality
+                assurance systems.
               </p>
+            </div>
 
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                With advanced testing equipment and experienced quality
-                professionals, we ensure compliance with BIS, ISO and internal
-                quality standards.
+            <div className="bg-[#F3F6F8] rounded-2xl p-6">
+              <h4 className="font-bold text-[#071B4A]">Our Standard</h4>
+
+              <p className="text-sm text-gray-600 mt-2">
+                Consistent testing, inspection and certification for every
+                production batch.
               </p>
-
-              <div className="grid sm:grid-cols-2 gap-4 mt-8">
-                <div className="bg-[#F3F6F8] rounded-2xl p-5">
-                  <h4 className="font-bold text-[#071B4A]">Our Mission</h4>
-
-                  <p className="text-sm text-gray-600 mt-2">
-                    Deliver reliable piping solutions through strict quality
-                    assurance systems.
-                  </p>
-                </div>
-
-                <div className="bg-[#F3F6F8] rounded-2xl p-5">
-                  <h4 className="font-bold text-[#071B4A]">Our Standard</h4>
-
-                  <p className="text-sm text-gray-600 mt-2">
-                    Consistent testing, inspection and certification for every
-                    production batch.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -298,39 +296,6 @@ export const QualityTesting: React.FC = () => {
                 src="/logos/girda.jpg"
                 alt="Approval Authority 2"
                 className="h-20 object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* LABORATORY GALLERY */}
-      <section className="py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="text-[#08A9D6] text-xs uppercase font-bold tracking-widest">
-              Laboratory Infrastructure
-            </span>
-
-            <h2 className="mt-3 text-3xl lg:text-4xl font-extrabold text-[#071B4A]">
-              Quality Testing & Inspection Facility
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="rounded-3xl overflow-hidden border border-gray-100 bg-[#F3F6F8]">
-              <img
-                src="/lab1.jpg"
-                alt="Pipe Testing Laboratory"
-                className="w-full h-[420px] object-cover"
-              />
-            </div>
-
-            <div className="rounded-3xl overflow-hidden border border-gray-100 bg-[#F3F6F8]">
-              <img
-                src="/lab2.jpg"
-                alt="Quality Inspection Laboratory"
-                className="w-full h-[420px] object-cover"
               />
             </div>
           </div>
