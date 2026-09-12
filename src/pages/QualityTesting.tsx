@@ -14,34 +14,94 @@ import { Helmet } from "react-helmet-async";
 export const QualityTesting: React.FC = () => {
   const testingPoints = [
     {
-      icon: <Gauge className="w-6 h-6" />,
-      title: "Hydrostatic Pressure Test",
-      desc: "Ensures pipes withstand required internal pressure levels.",
-    },
-    {
-      icon: <FlaskConical className="w-6 h-6" />,
-      title: "Raw Material Testing",
-      desc: "Verification of resin quality and composition before production.",
+      icon: <ShieldCheck className="w-6 h-6" />,
+      title: "Visual Inspection",
+      desc: "Checks the pipe for visible defects, cracks, bubbles and surface damage.",
     },
     {
       icon: <Microscope className="w-6 h-6" />,
-      title: "Dimensional Accuracy",
-      desc: "Checks wall thickness, diameter and manufacturing tolerance.",
+      title: "Dimensional Test",
+      desc: "Checks diameter, wall thickness, length and dimensional accuracy.",
+    },
+    {
+      icon: <Gauge className="w-6 h-6" />,
+      title: "Hydrostatic Pressure Test",
+      desc: "Checks the pipe’s ability to withstand internal water pressure.",
+    },
+    {
+      icon: <Gauge className="w-6 h-6" />,
+      title: "Burst Pressure Test",
+      desc: "Determines the pressure level at which the pipe bursts.",
     },
     {
       icon: <Factory className="w-6 h-6" />,
-      title: "Impact Resistance",
-      desc: "Evaluates product strength under external force conditions.",
+      title: "Impact Test",
+      desc: "Checks resistance against sudden shock and impact forces.",
     },
     {
-      icon: <ShieldCheck className="w-6 h-6" />,
-      title: "Leakage Testing",
-      desc: "Ensures zero leakage and dependable field performance.",
+      icon: <Factory className="w-6 h-6" />,
+      title: "Flattening Test",
+      desc: "Checks the pipe’s resistance to deformation under compression.",
     },
     {
       icon: <CheckCircle2 className="w-6 h-6" />,
-      title: "Quality Verification",
-      desc: "Final inspection before dispatch and customer delivery.",
+      title: "Reversion Test",
+      desc: "Measures dimensional shrinkage when the pipe is heated.",
+    },
+    {
+      icon: <CheckCircle2 className="w-6 h-6" />,
+      title: "Tensile Test",
+      desc: "Measures material strength and elongation under pulling force.",
+    },
+    {
+      icon: <FlaskConical className="w-6 h-6" />,
+      title: "Vicat Softening Temperature Test",
+      desc: "Determines the temperature at which the plastic starts to soften.",
+    },
+    {
+      icon: <FlaskConical className="w-6 h-6" />,
+      title: "Density Test",
+      desc: "Measures the density of the pipe material.",
+    },
+    {
+      icon: <FlaskConical className="w-6 h-6" />,
+      title: "MFR / MFI Test",
+      desc: "Measures the flow rate of molten plastic under specified conditions.",
+    },
+    {
+      icon: <ShieldCheck className="w-6 h-6" />,
+      title: "Carbon Black Content Test",
+      desc: "Checks carbon black percentage in HDPE for UV protection.",
+    },
+    {
+      icon: <ShieldCheck className="w-6 h-6" />,
+      title: "Carbon Black Dispersion Test",
+      desc: "Checks uniform distribution of carbon black in HDPE material.",
+    },
+    {
+      icon: <ShieldCheck className="w-6 h-6" />,
+      title: "OIT Test",
+      desc: "Checks oxidation resistance and thermal stability of HDPE.",
+    },
+    {
+      icon: <Gauge className="w-6 h-6" />,
+      title: "Collapse Pressure Test",
+      desc: "Checks resistance against external pressure and pipe collapse.",
+    },
+    {
+      icon: <Factory className="w-6 h-6" />,
+      title: "Joint / Thread Strength Test",
+      desc: "Checks the strength of pipe joints, sockets and threads.",
+    },
+    {
+      icon: <ShieldCheck className="w-6 h-6" />,
+      title: "Leakage Test",
+      desc: "Ensures pipes and joints remain completely watertight.",
+    },
+    {
+      icon: <CheckCircle2 className="w-6 h-6" />,
+      title: "Straightness Test",
+      desc: "Checks whether the pipe is straight within specified limits.",
     },
   ];
 
@@ -211,6 +271,72 @@ export const QualityTesting: React.FC = () => {
         </div>
       </section>
 
+      {/* APPROVED BY */}
+      <section className="py-14 bg-[#F3F6F8]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <span className="text-[#08A9D6] text-xs uppercase font-bold tracking-widest">
+              Certifications & Approvals
+            </span>
+
+            <h2 className="mt-3 text-3xl lg:text-4xl font-extrabold text-[#071B4A]">
+              Approved By
+            </h2>
+          </div>
+
+          <div className="flex flex-wrap justify-center items-center gap-10">
+            <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
+              <img
+                src="/logos/CIPET.jpg"
+                alt="Approval Authority 1"
+                className="h-20 object-contain"
+              />
+            </div>
+
+            <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
+              <img
+                src="/logos/girda.jpg"
+                alt="Approval Authority 2"
+                className="h-20 object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LABORATORY GALLERY */}
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <span className="text-[#08A9D6] text-xs uppercase font-bold tracking-widest">
+              Laboratory Infrastructure
+            </span>
+
+            <h2 className="mt-3 text-3xl lg:text-4xl font-extrabold text-[#071B4A]">
+              Quality Testing & Inspection Facility
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="rounded-3xl overflow-hidden border border-gray-100 bg-[#F3F6F8]">
+              <img
+                src="/lab1.jpg"
+                alt="Pipe Testing Laboratory"
+                className="w-full h-[420px] object-cover"
+              />
+            </div>
+
+            <div className="rounded-3xl overflow-hidden border border-gray-100 bg-[#F3F6F8]">
+              <img
+                src="/lab2.jpg"
+                alt="Quality Inspection Laboratory"
+                className="w-full h-[420px] object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* PROCESS */}
       <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -227,10 +353,11 @@ export const QualityTesting: React.FC = () => {
           <div className="grid md:grid-cols-5 gap-6">
             {[
               "Raw Material Inspection",
-              "Production Monitoring",
-              "Laboratory Testing",
-              "Quality Verification",
-              "Dispatch Approval",
+              "Dimensional Verification",
+              "Pressure Testing",
+              "Mechanical Testing",
+              "Quality Approval",
+              "Dispatch Clearance",
             ].map((step, i) => (
               <div key={i} className="bg-[#F3F6F8] rounded-2xl p-5 text-center">
                 <div className="w-12 h-12 rounded-full bg-[#08A9D6] text-white font-bold flex items-center justify-center mx-auto mb-4">
