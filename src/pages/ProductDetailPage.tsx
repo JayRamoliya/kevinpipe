@@ -14,6 +14,7 @@ import {
   Image as ImageIcon,
 } from "lucide-react";
 import { PRODUCTS_DATA } from "../data/products";
+import { Helmet } from "react-helmet-async";
 
 interface ProductDetailPageProps {
   onOpenQuote: () => void;
@@ -45,6 +46,16 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
       id={`product-detail-${product.id}`}
       className="w-full bg-white text-[#111827]"
     >
+      <Helmet>
+        <title>{product.name}</title>
+
+        <meta name="description" content={product.shortDesc} />
+
+        <link
+          rel="canonical"
+          href={`https://kevinpipes.com/products/${product.id}`}
+        />
+      </Helmet>
       {/* 1. BREADCRUMB & BACK LINK */}
       <div className="bg-[#F3F6F8] border-b border-gray-200/60 py-3.5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">

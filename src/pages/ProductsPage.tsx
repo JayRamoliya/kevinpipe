@@ -8,6 +8,8 @@ import {
   Download,
 } from "lucide-react";
 import { PRODUCTS_DATA } from "../data/products";
+import { Helmet } from "react-helmet-async";
+
 
 interface ProductsPageProps {
   onOpenQuote: () => void;
@@ -23,6 +25,16 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
       id="products-page-container"
       className="w-full bg-white text-[#111827]"
     >
+      <Helmet>
+        <title>PVC & HDPE Pipes Products | Kevin PVC Pipe Industries</title>
+
+        <meta
+          name="description"
+          content="Explore our range of uPVC Ringfit Pipes, Column Pipes, Casing Pipes, HDPE Pipes and Sprinkler Pipes designed for durability and reliable performance."
+        />
+
+        <link rel="canonical" href="https://kevinpipes.com/products" />
+      </Helmet>
       {/* 1. HERO BANNER */}
       <section
         className="text-white py-16 lg:py-20 relative overflow-hidden bg-cover bg-center"

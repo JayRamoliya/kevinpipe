@@ -2,11 +2,32 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Building2, ShieldCheck, Users } from "lucide-react";
 import { CLIENT_LOGOS } from "../data/products";
+import { Helmet } from "react-helmet-async";
+
 
 export const ClientsPage = () => {
   return (
     <div className="bg-white">
+      <Helmet>
+        <title>Our Clients | Kevin PVC Pipe Industries</title>
 
+        <meta
+          name="description"
+          content="Explore the trusted clients and organizations associated with Kevin PVC Pipe Industries. Delivering reliable uPVC and HDPE pipe solutions across India."
+        />
+
+        <meta
+          property="og:title"
+          content="Our Clients | Kevin PVC Pipe Industries"
+        />
+
+        <meta
+          property="og:description"
+          content="Trusted by government, industrial and agricultural sectors for quality piping solutions."
+        />
+
+        <link rel="canonical" href="https://kevinpipes.com/clients" />
+      </Helmet>
       {/* Hero */}
       <section className="bg-[#071B4A] py-20 text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
@@ -30,11 +51,12 @@ export const ClientsPage = () => {
       <section className="py-16 bg-[#F3F6F8]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-6">
-
             <div className="bg-white p-8 rounded-3xl text-center border">
               <Building2 className="w-10 h-10 mx-auto text-[#08A9D6]" />
               <h3 className="text-3xl font-bold mt-4 text-[#071B4A]">100+</h3>
-              <p className="text-gray-600 mt-2">Government & Institutional Projects</p>
+              <p className="text-gray-600 mt-2">
+                Government & Institutional Projects
+              </p>
             </div>
 
             <div className="bg-white p-8 rounded-3xl text-center border">
@@ -48,7 +70,6 @@ export const ClientsPage = () => {
               <h3 className="text-3xl font-bold mt-4 text-[#071B4A]">20+</h3>
               <p className="text-gray-600 mt-2">Years of Industry Trust</p>
             </div>
-
           </div>
         </div>
       </section>
@@ -56,7 +77,6 @@ export const ClientsPage = () => {
       {/* Logos */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-
           <div className="text-center mb-14">
             <span className="text-[#08A9D6] text-xs font-bold uppercase tracking-[3px]">
               Client Network
@@ -91,9 +111,7 @@ export const ClientsPage = () => {
       {/* Featured Clients */}
       <section className="py-20 bg-[#F3F6F8]">
         <div className="max-w-7xl mx-auto px-4">
-
           <div className="grid md:grid-cols-3 gap-6">
-
             <div className="bg-white rounded-3xl p-8 border">
               <h3 className="text-xl font-bold text-[#071B4A]">WASMO</h3>
               <p className="mt-4 text-gray-600">
@@ -117,7 +135,6 @@ export const ClientsPage = () => {
                 subsidy-based farming projects.
               </p>
             </div>
-
           </div>
         </div>
       </section>
@@ -125,7 +142,6 @@ export const ClientsPage = () => {
       {/* CTA */}
       <section className="py-20 bg-[#071B4A] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-
           <h2 className="text-4xl font-extrabold">
             Become Our Next Success Partner
           </h2>
@@ -142,10 +158,8 @@ export const ClientsPage = () => {
             Contact Us
             <ArrowRight className="w-4 h-4" />
           </Link>
-
         </div>
       </section>
-
     </div>
   );
 };

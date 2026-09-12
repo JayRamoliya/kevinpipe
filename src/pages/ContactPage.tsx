@@ -12,6 +12,7 @@ import {
   Factory,
 } from "lucide-react";
 import { ContactFormData } from "../types";
+import { Helmet } from "react-helmet-async";
 
 export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -48,6 +49,24 @@ ${formData.message}`;
 
   return (
     <div id="contact-page-container" className="w-full bg-white text-[#111827]">
+      <Helmet>
+        <title>Contact Kevin PVC Pipe Industries | Get a Quote Today</title>
+
+        <meta
+          name="description"
+          content="Contact Kevin PVC Pipe Industries for product inquiries, dealership opportunities and custom piping solutions. Get in touch with our team today."
+        />
+
+        <meta property="og:title" content="Contact Kevin PVC Pipe Industries" />
+
+        <meta
+          property="og:description"
+          content="Reach out to our team for product information, quotations and business partnerships."
+        />
+
+        <link rel="canonical" href="https://kevinpipes.com/contact" />
+      </Helmet>
+
       {/* 1. HERO BANNER */}
       <section className="bg-[#071B4A] text-white py-16 lg:py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#08A9D6_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none" />

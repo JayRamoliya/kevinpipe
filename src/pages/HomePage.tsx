@@ -14,6 +14,7 @@ import {
   Download,
 } from "lucide-react";
 import { PRODUCTS_DATA, CLIENT_LOGOS, CERTIFICATIONS } from "../data/products";
+import { Helmet } from "react-helmet-async";
 
 interface HomePageProps {
   onOpenQuote: () => void;
@@ -26,6 +27,30 @@ export const HomePage: React.FC<HomePageProps> = ({
 }) => {
   return (
     <div id="home-page-container" className="w-full bg-white text-[#111827]">
+      <Helmet>
+        <title>
+          Kevin PVC Pipe Industries | uPVC, HDPE & Agricultural Pipe
+          Manufacturer
+        </title>
+
+        <meta
+          name="description"
+          content="Kevin PVC Pipe Industries is a leading manufacturer of uPVC Ringfit Pipes, Column Pipes, Casing Pipes, HDPE Pipes and Sprinkler Pipes for water supply, irrigation and infrastructure projects across India."
+        />
+
+        <meta
+          property="og:title"
+          content="Kevin PVC Pipe Industries | uPVC & HDPE Pipe Manufacturer"
+        />
+
+        <meta
+          property="og:description"
+          content="Trusted manufacturer of uPVC and HDPE piping solutions for agriculture, water supply and infrastructure applications."
+        />
+
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://kevinpipes.com/" />
+      </Helmet>
       <section
         id="hero-section"
         className="relative overflow-hidden bg-[#071B4A] text-white pt-10 pb-16 sm:pt-14 sm:pb-20 lg:pt-20 lg:pb-28"

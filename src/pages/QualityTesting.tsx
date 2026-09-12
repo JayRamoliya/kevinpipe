@@ -9,6 +9,7 @@ import {
   Factory,
   ArrowRight,
 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export const QualityTesting: React.FC = () => {
   const testingPoints = [
@@ -46,7 +47,36 @@ export const QualityTesting: React.FC = () => {
 
   return (
     <div className="w-full bg-white text-[#111827]">
+      <Helmet>
+        <title>
+          Quality Testing Laboratory | PVC Pipe Quality Assurance | Kevin PVC
+          Pipe Industries
+        </title>
 
+        <meta
+          name="description"
+          content="Explore Kevin PVC Pipe Industries advanced quality testing laboratory. Hydrostatic pressure testing, raw material inspection, dimensional accuracy, impact resistance and leakage testing ensure superior uPVC and HDPE pipe quality."
+        />
+
+        <meta
+          name="keywords"
+          content="PVC Pipe Testing, Quality Testing Laboratory, uPVC Pipe Quality Check, HDPE Pipe Testing, Hydrostatic Pressure Test, Pipe Manufacturer Gujarat, Quality Assurance"
+        />
+
+        <meta
+          property="og:title"
+          content="Quality Testing Laboratory | Kevin PVC Pipe Industries"
+        />
+
+        <meta
+          property="og:description"
+          content="Every pipe undergoes rigorous quality testing including pressure testing, impact resistance, dimensional accuracy and leakage verification."
+        />
+
+        <meta property="og:type" content="website" />
+
+        <link rel="canonical" href="https://kevinpipes.com/quality-testing" />
+      </Helmet>
       {/* HERO */}
       <section
         className="relative overflow-hidden text-white py-16 lg:py-24 bg-cover bg-center"
@@ -68,8 +98,8 @@ export const QualityTesting: React.FC = () => {
           </h1>
 
           <p className="mt-5 max-w-3xl mx-auto text-sky-100/80 text-lg leading-relaxed">
-            Every pipe manufactured undergoes rigorous testing procedures
-            to ensure unmatched quality, strength, durability and long-term
+            Every pipe manufactured undergoes rigorous testing procedures to
+            ensure unmatched quality, strength, durability and long-term
             performance.
           </p>
         </div>
@@ -78,9 +108,7 @@ export const QualityTesting: React.FC = () => {
       {/* ABOUT TESTING */}
       <section className="py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
           <div className="grid lg:grid-cols-12 gap-12 items-center">
-
             <div className="lg:col-span-5">
               <div className="relative rounded-3xl overflow-hidden border border-gray-100 p-2 bg-[#F3F6F8]">
                 <img
@@ -112,23 +140,20 @@ export const QualityTesting: React.FC = () => {
 
               <p className="mt-5 text-gray-600 leading-relaxed">
                 Our quality control laboratory continuously monitors raw
-                materials, manufacturing processes and finished products.
-                Every batch is subjected to comprehensive testing before
-                approval and dispatch.
+                materials, manufacturing processes and finished products. Every
+                batch is subjected to comprehensive testing before approval and
+                dispatch.
               </p>
 
               <p className="mt-4 text-gray-600 leading-relaxed">
                 With advanced testing equipment and experienced quality
-                professionals, we ensure compliance with BIS, ISO and
-                internal quality standards.
+                professionals, we ensure compliance with BIS, ISO and internal
+                quality standards.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4 mt-8">
-
                 <div className="bg-[#F3F6F8] rounded-2xl p-5">
-                  <h4 className="font-bold text-[#071B4A]">
-                    Our Mission
-                  </h4>
+                  <h4 className="font-bold text-[#071B4A]">Our Mission</h4>
 
                   <p className="text-sm text-gray-600 mt-2">
                     Deliver reliable piping solutions through strict quality
@@ -137,28 +162,22 @@ export const QualityTesting: React.FC = () => {
                 </div>
 
                 <div className="bg-[#F3F6F8] rounded-2xl p-5">
-                  <h4 className="font-bold text-[#071B4A]">
-                    Our Standard
-                  </h4>
+                  <h4 className="font-bold text-[#071B4A]">Our Standard</h4>
 
                   <p className="text-sm text-gray-600 mt-2">
-                    Consistent testing, inspection and certification for
-                    every production batch.
+                    Consistent testing, inspection and certification for every
+                    production batch.
                   </p>
                 </div>
-
               </div>
             </div>
-
           </div>
-
         </div>
       </section>
 
       {/* TESTING FACILITIES */}
       <section className="py-16 lg:py-20 bg-[#F3F6F8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
           <div className="text-center mb-14">
             <span className="text-[#08A9D6] text-xs uppercase font-bold tracking-widest">
               Testing Facilities
@@ -170,7 +189,6 @@ export const QualityTesting: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
             {testingPoints.map((item, index) => (
               <div
                 key={index}
@@ -189,16 +207,13 @@ export const QualityTesting: React.FC = () => {
                 </p>
               </div>
             ))}
-
           </div>
-
         </div>
       </section>
 
       {/* PROCESS */}
       <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-
           <div className="text-center mb-14">
             <span className="text-[#08A9D6] text-xs uppercase font-bold tracking-widest">
               Testing Process
@@ -210,7 +225,6 @@ export const QualityTesting: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-5 gap-6">
-
             {[
               "Raw Material Inspection",
               "Production Monitoring",
@@ -218,29 +232,21 @@ export const QualityTesting: React.FC = () => {
               "Quality Verification",
               "Dispatch Approval",
             ].map((step, i) => (
-              <div
-                key={i}
-                className="bg-[#F3F6F8] rounded-2xl p-5 text-center"
-              >
+              <div key={i} className="bg-[#F3F6F8] rounded-2xl p-5 text-center">
                 <div className="w-12 h-12 rounded-full bg-[#08A9D6] text-white font-bold flex items-center justify-center mx-auto mb-4">
                   {i + 1}
                 </div>
 
-                <p className="font-semibold text-[#071B4A] text-sm">
-                  {step}
-                </p>
+                <p className="font-semibold text-[#071B4A] text-sm">{step}</p>
               </div>
             ))}
-
           </div>
-
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-20 bg-[#071B4A] text-white">
         <div className="max-w-4xl mx-auto text-center px-4">
-
           <h2 className="text-4xl lg:text-5xl font-extrabold">
             Quality You Can Trust
           </h2>
@@ -256,10 +262,8 @@ export const QualityTesting: React.FC = () => {
             Contact Our Team
             <ArrowRight className="w-4 h-4" />
           </Link>
-
         </div>
       </section>
-
     </div>
   );
 };

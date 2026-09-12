@@ -11,6 +11,7 @@ import {
   ArrowRight,
   FileCheck2,
 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const GOOGLE_FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSftBEjBn9GwCTWa6iYMVRB3JUz_vbqIF72OPK0JIpVHA7bZww/viewform?usp=dialog";
@@ -30,6 +31,27 @@ export const BecomePartnerPage: React.FC = () => {
       id="become-partner-page-container"
       className="w-full bg-white text-[#111827]"
     >
+      <Helmet>
+        <title>Become a Dealer & Distributor | Kevin PVC Pipe Industries</title>
+
+        <meta
+          name="description"
+          content="Partner with Kevin PVC Pipe Industries as a dealer or distributor. Expand your business with high-quality uPVC and HDPE pipe products."
+        />
+
+        <meta
+          property="og:title"
+          content="Become a Dealer & Distributor | Kevin PVC Pipe Industries"
+        />
+
+        <meta
+          property="og:description"
+          content="Join our growing dealer and distributor network across India."
+        />
+
+        <link rel="canonical" href="https://kevinpipes.com/become-partner" />
+      </Helmet>
+
       {/* 1. HERO SECTION */}
       <section
         className="text-white py-14 sm:py-16 lg:py-24 relative overflow-hidden bg-cover bg-center"

@@ -1,9 +1,35 @@
 import React from "react";
-import { ShieldCheck, HeartHandshake, Sparkles, ArrowRight } from "lucide-react";
+import {
+  ShieldCheck,
+  HeartHandshake,
+  Sparkles,
+  ArrowRight,
+} from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export const CareerPage: React.FC = () => {
   return (
     <div className="w-full bg-white text-[#111827]">
+      <Helmet>
+        <title>Careers at Kevin PVC Pipe Industries | Join Our Team</title>
+
+        <meta
+          name="description"
+          content="Explore career opportunities at Kevin PVC Pipe Industries. Join a growing team dedicated to innovation, quality and customer satisfaction."
+        />
+
+        <meta
+          property="og:title"
+          content="Careers at Kevin PVC Pipe Industries"
+        />
+
+        <meta
+          property="og:description"
+          content="Build your future with one of India's trusted uPVC and HDPE pipe manufacturers."
+        />
+
+        <link rel="canonical" href="https://kevinpipes.com/career" />
+      </Helmet>
       {/* Hero Section */}
       <section
         className="text-white py-16 lg:py-20 relative overflow-hidden bg-cover bg-center"

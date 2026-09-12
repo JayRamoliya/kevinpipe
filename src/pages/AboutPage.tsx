@@ -13,15 +13,24 @@ import {
   PhoneCall,
   ArrowRight,
 } from "lucide-react";
-import {
-  OWNER_IMAGE,
-  CLIENT_LOGOS,
-  CERTIFICATIONS,
-} from "../data/products";
+import { OWNER_IMAGE, CLIENT_LOGOS, CERTIFICATIONS } from "../data/products";
+import { Helmet } from "react-helmet-async";
 
 export const AboutPage: React.FC = () => {
   return (
     <div id="about-page-container" className="w-full bg-white text-[#111827]">
+      <Helmet>
+        <title>
+          About Kevin PVC Pipe Industries | PVC Pipe Manufacturer in Gujarat
+        </title>
+
+        <meta
+          name="description"
+          content="Learn about Kevin PVC Pipe Industries, a trusted manufacturer of quality uPVC and HDPE pipe solutions serving agriculture, irrigation and infrastructure sectors."
+        />
+
+        <link rel="canonical" href="https://kevinpipes.com/about" />
+      </Helmet>
       {/* 1. PAGE HEADER / BANNER */}
       <section
         className="text-white py-16 lg:py-20 relative overflow-hidden bg-cover bg-center"
