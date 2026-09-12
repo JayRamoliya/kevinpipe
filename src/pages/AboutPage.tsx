@@ -13,7 +13,7 @@ import {
   PhoneCall,
   ArrowRight,
 } from "lucide-react";
-import { OWNER_IMAGE, CLIENT_LOGOS, CERTIFICATIONS } from "../data/products";
+import { CLIENT_LOGOS, CERTIFICATIONS } from "../data/products";
 import { Helmet } from "react-helmet-async";
 
 export const AboutPage: React.FC = () => {
@@ -160,13 +160,14 @@ export const AboutPage: React.FC = () => {
           <div className="bg-white rounded-card border border-gray-100 soft-shadow p-6 sm:p-10 lg:p-12 w-full max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-center">
               <div className="md:col-span-4 text-center">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 mx-auto rounded-2xl overflow-hidden border-4 border-sky-100 shadow-md">
+                <div className="w-56 h-56 sm:w-64 sm:h-64 mx-auto rounded-2xl overflow-hidden border-4 border-sky-100 shadow-md">
                   <img
-                    src={OWNER_IMAGE}
+                    src="owner.jpg"
                     alt="Kishorbhai Hadiya - Founder & Managing Director"
                     className="w-full h-full object-cover"
                   />
                 </div>
+                
 
                 <div className="mt-3.5">
                   <h3 className="text-lg font-bold text-[#071B4A] font-heading">

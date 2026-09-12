@@ -3,7 +3,6 @@ import { ProductItem } from "../types";
 export const HERO_IMAGE = "/src/assets/images/hero_pvc_pipes_1788955947955.jpg";
 export const FACTORY_IMAGE =
   "/src/assets/images/factory_plant_1788955961208.jpg";
-export const OWNER_IMAGE = "/src/assets/images/owner_profile_1789007742209.jpg";
 
 
 export const PRODUCTS_DATA: ProductItem[] = [
