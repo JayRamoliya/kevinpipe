@@ -438,9 +438,13 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* ----------------- 4. ABOUT PREVIEW ----------------- */}
       <section
         id="about-preview-section"
-        className="py-14 sm:py-20 bg-[#F3F6F8]"
+        className="relative py-14 sm:py-20 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/bg1.png')",
+        }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-white/90"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-6">
               <div className="relative rounded-card overflow-hidden border border-gray-200 soft-shadow p-2 bg-white">

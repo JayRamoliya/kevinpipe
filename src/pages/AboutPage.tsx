@@ -167,7 +167,6 @@ export const AboutPage: React.FC = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                
 
                 <div className="mt-3.5">
                   <h3 className="text-lg font-bold text-[#071B4A] font-heading">
@@ -305,8 +304,14 @@ export const AboutPage: React.FC = () => {
       </section>
 
       {/* 4. CERTIFICATION SECTION */}
-      <section className="py-14 sm:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section
+        className="relative py-14 sm:py-20 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/bg2.png')",
+        }}
+      >
+        <div className="absolute inset-0 bg-white/90"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
             <span className="text-xs font-bold uppercase tracking-widest text-[#08A9D6] block mb-2 font-heading">
               Certified Quality Benchmark
@@ -448,7 +453,13 @@ export const AboutPage: React.FC = () => {
       </section>
 
       {/* 6. APPROVED COMPANY BY SECTION */}
-      <section className="py-14 sm:py-20 bg-white">
+      <section
+        className="relative py-14 sm:py-20 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(243,246,248,0.92), rgba(243,246,248,0.92)), url('/bg3.png')",
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
             <span className="text-xs font-bold uppercase tracking-widest text-[#08A9D6] block mb-2 font-heading">
