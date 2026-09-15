@@ -253,15 +253,12 @@ export const HomePage: React.FC<HomePageProps> = ({
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center">
-            <a
-              href="https://www.instagram.com/reel/DdTqe9gT0rT/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative block w-full max-w-md group"
-            >
+            <div className="relative w-full max-w-md">
               <video
                 autoPlay
+                muted
                 loop
+                controls
                 playsInline
                 preload="auto"
                 className="w-full rounded-3xl shadow-xl object-cover"
@@ -269,7 +266,13 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <source src="/videos/kevin-pvc-reel.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <div className="absolute top-4 right-4 bg-white/95 px-3 py-1.5 rounded-full shadow-md flex items-center gap-2">
+
+              <a
+                href="https://www.instagram.com/reel/DdTqe9gT0rT/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute top-4 right-4 bg-white/95 px-3 py-1.5 rounded-full shadow-md flex items-center gap-2 hover:scale-105 transition"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -281,8 +284,8 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <span className="text-xs font-semibold text-[#071B4A]">
                   View on Instagram
                 </span>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         </div>
       </section>
