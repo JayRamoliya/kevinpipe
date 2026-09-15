@@ -261,7 +261,6 @@ export const HomePage: React.FC<HomePageProps> = ({
             >
               <video
                 autoPlay
-                muted
                 loop
                 playsInline
                 preload="auto"
