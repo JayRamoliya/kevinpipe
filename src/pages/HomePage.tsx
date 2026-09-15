@@ -250,6 +250,44 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
       </section>
 
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center">
+            <a
+              href="https://www.instagram.com/reel/DdTqe9gT0rT/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative block w-full max-w-md group"
+            >
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                className="w-full rounded-3xl shadow-xl object-cover"
+              >
+                <source src="/videos/kevin-pvc-reel.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute top-4 right-4 bg-white/95 px-3 py-1.5 rounded-full shadow-md flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-4 h-4 text-pink-600"
+                >
+                  <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zm0 1.5h8.5A4.25 4.25 0 0 1 20.5 7.75v8.5a4.25 4.25 0 0 1-4.25 4.25h-8.5A4.25 4.25 0 0 1 3.5 16.25v-8.5A4.25 4.25 0 0 1 7.75 3.5zm9.25 1a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5zM12 6.5A5.5 5.5 0 1 0 17.5 12 5.506 5.506 0 0 0 12 6.5zm0 1.5A4 4 0 1 1 8 12a4.005 4.005 0 0 1 4-4z" />
+                </svg>
+                <span className="text-xs font-semibold text-[#071B4A]">
+                  View on Instagram
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ----------------- 2. WHY CHOOSE KEVIN ----------------- */}
       <section id="why-choose-section" className="py-14 sm:py-20 bg-[#F3F6F8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
