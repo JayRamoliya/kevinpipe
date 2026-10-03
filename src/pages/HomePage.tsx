@@ -250,132 +250,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
       </section>
 
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center">
-            <div className="relative w-full max-w-md">
-              <video
-                autoPlay
-                muted
-                loop
-                controls
-                playsInline
-                preload="auto"
-                className="w-full rounded-3xl shadow-xl object-cover"
-              >
-                <source src="/videos/kevin-pvc-reel.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-
-              <a
-                href="https://www.instagram.com/reel/DdTqe9gT0rT/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute top-4 right-4 bg-white/95 px-3 py-1.5 rounded-full shadow-md flex items-center gap-2 hover:scale-105 transition"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-4 h-4 text-pink-600"
-                >
-                  <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zm0 1.5h8.5A4.25 4.25 0 0 1 20.5 7.75v8.5a4.25 4.25 0 0 1-4.25 4.25h-8.5A4.25 4.25 0 0 1 3.5 16.25v-8.5A4.25 4.25 0 0 1 7.75 3.5zm9.25 1a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5zM12 6.5A5.5 5.5 0 1 0 17.5 12 5.506 5.506 0 0 0 12 6.5zm0 1.5A4 4 0 1 1 8 12a4.005 4.005 0 0 1 4-4z" />
-                </svg>
-                <span className="text-xs font-semibold text-[#071B4A]">
-                  View on Instagram
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ----------------- 2. WHY CHOOSE KEVIN ----------------- */}
-      <section id="why-choose-section" className="py-14 sm:py-20 bg-[#F3F6F8]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#08A9D6] block mb-2 font-heading">
-              Why Choose Us
-            </span>
-
-            <h2 className="text-[26px] sm:text-3xl lg:text-4xl font-extrabold text-[#071B4A] font-heading tracking-tight leading-tight">
-              Trusted Quality. Reliable Performance.
-            </h2>
-
-            <p className="text-gray-600 mt-3 text-base leading-relaxed font-normal">
-              KEVIN PVC PIPE is committed to delivering premium quality uPVC,
-              PVC and HDPE piping solutions. Our focus on quality manufacturing,
-              durable raw materials and customer satisfaction makes us a trusted
-              choice across agricultural, residential and industrial sectors.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-            <div className="bg-white rounded-card p-6 sm:p-7 border border-gray-100 soft-shadow transition-shadow">
-              <div className="w-12 h-12 rounded-2xl bg-sky-50 text-[#08A9D6] flex items-center justify-center mb-5">
-                <ShieldCheck className="w-6 h-6 stroke-[2.2]" />
-              </div>
-
-              <h3 className="text-lg font-bold text-[#071B4A] mb-2 font-heading">
-                Premium Raw Materials
-              </h3>
-
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
-                Manufactured using high-quality raw materials to ensure superior
-                strength, durability and long service life in every application.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-card p-6 sm:p-7 border border-gray-100 soft-shadow transition-shadow">
-              <div className="w-12 h-12 rounded-2xl bg-sky-50 text-[#08A9D6] flex items-center justify-center mb-5">
-                <Award className="w-6 h-6 stroke-[2.2]" />
-              </div>
-
-              <h3 className="text-lg font-bold text-[#071B4A] mb-2 font-heading">
-                ISO Certified Manufacturing
-              </h3>
-
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
-                Our manufacturing processes follow ISO 9001:2008 quality
-                standards, ensuring consistent product quality and reliability.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-card p-6 sm:p-7 border border-gray-100 soft-shadow transition-shadow">
-              <div className="w-12 h-12 rounded-2xl bg-sky-50 text-[#08A9D6] flex items-center justify-center mb-5">
-                <Droplets className="w-6 h-6 stroke-[2.2]" />
-              </div>
-
-              <h3 className="text-lg font-bold text-[#071B4A] mb-2 font-heading">
-                Leak-Proof Performance
-              </h3>
-
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
-                Engineered for smooth water flow and secure connections,
-                reducing leakage risks and ensuring efficient performance.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-card p-6 sm:p-7 border border-gray-100 soft-shadow transition-shadow">
-              <div className="w-12 h-12 rounded-2xl bg-sky-50 text-[#08A9D6] flex items-center justify-center mb-5">
-                <Factory className="w-6 h-6 stroke-[2.2]" />
-              </div>
-
-              <h3 className="text-lg font-bold text-[#071B4A] mb-2 font-heading">
-                Wide Product Range
-              </h3>
-
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
-                From uPVC Plain Socket & Ringfit Pipes to HDPE Pipes, Sprinkler
-                Pipes, Column Pipes and Casing Pipes, we provide complete piping
-                solutions.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ----------------- 3. PRODUCT CATEGORIES ----------------- */}
+            {/* ----------------- 3. PRODUCT CATEGORIES ----------------- */}
       <section id="products-section" className="py-14 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-14 gap-4 sm:gap-6">
@@ -471,6 +346,131 @@ export const HomePage: React.FC<HomePageProps> = ({
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ----------------- 2. WHY CHOOSE KEVIN ----------------- */}
+      <section id="why-choose-section" className="py-14 sm:py-20 bg-[#F3F6F8]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#08A9D6] block mb-2 font-heading">
+              Why Choose Us
+            </span>
+
+            <h2 className="text-[26px] sm:text-3xl lg:text-4xl font-extrabold text-[#071B4A] font-heading tracking-tight leading-tight">
+              Trusted Quality. Reliable Performance.
+            </h2>
+
+            <p className="text-gray-600 mt-3 text-base leading-relaxed font-normal">
+              KEVIN PVC PIPE is committed to delivering premium quality uPVC,
+              PVC and HDPE piping solutions. Our focus on quality manufacturing,
+              durable raw materials and customer satisfaction makes us a trusted
+              choice across agricultural, residential and industrial sectors.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+            <div className="bg-white rounded-card p-6 sm:p-7 border border-gray-100 soft-shadow transition-shadow">
+              <div className="w-12 h-12 rounded-2xl bg-sky-50 text-[#08A9D6] flex items-center justify-center mb-5">
+                <ShieldCheck className="w-6 h-6 stroke-[2.2]" />
+              </div>
+
+              <h3 className="text-lg font-bold text-[#071B4A] mb-2 font-heading">
+                Premium Raw Materials
+              </h3>
+
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
+                Manufactured using high-quality raw materials to ensure superior
+                strength, durability and long service life in every application.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-card p-6 sm:p-7 border border-gray-100 soft-shadow transition-shadow">
+              <div className="w-12 h-12 rounded-2xl bg-sky-50 text-[#08A9D6] flex items-center justify-center mb-5">
+                <Award className="w-6 h-6 stroke-[2.2]" />
+              </div>
+
+              <h3 className="text-lg font-bold text-[#071B4A] mb-2 font-heading">
+                ISO Certified Manufacturing
+              </h3>
+
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
+                Our manufacturing processes follow ISO 9001:2008 quality
+                standards, ensuring consistent product quality and reliability.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-card p-6 sm:p-7 border border-gray-100 soft-shadow transition-shadow">
+              <div className="w-12 h-12 rounded-2xl bg-sky-50 text-[#08A9D6] flex items-center justify-center mb-5">
+                <Droplets className="w-6 h-6 stroke-[2.2]" />
+              </div>
+
+              <h3 className="text-lg font-bold text-[#071B4A] mb-2 font-heading">
+                Leak-Proof Performance
+              </h3>
+
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
+                Engineered for smooth water flow and secure connections,
+                reducing leakage risks and ensuring efficient performance.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-card p-6 sm:p-7 border border-gray-100 soft-shadow transition-shadow">
+              <div className="w-12 h-12 rounded-2xl bg-sky-50 text-[#08A9D6] flex items-center justify-center mb-5">
+                <Factory className="w-6 h-6 stroke-[2.2]" />
+              </div>
+
+              <h3 className="text-lg font-bold text-[#071B4A] mb-2 font-heading">
+                Wide Product Range
+              </h3>
+
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
+                From uPVC Plain Socket & Ringfit Pipes to HDPE Pipes, Sprinkler
+                Pipes, Column Pipes and Casing Pipes, we provide complete piping
+                solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center">
+            <div className="relative w-full max-w-md">
+              <video
+                autoPlay
+                muted
+                loop
+                controls
+                playsInline
+                preload="auto"
+                className="w-full rounded-3xl shadow-xl object-cover"
+              >
+                <source src="/videos/kevin-pvc-reel.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+
+              <a
+                href="https://www.instagram.com/reel/DdTqe9gT0rT/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute top-4 right-4 bg-white/95 px-3 py-1.5 rounded-full shadow-md flex items-center gap-2 hover:scale-105 transition"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-4 h-4 text-pink-600"
+                >
+                  <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zm0 1.5h8.5A4.25 4.25 0 0 1 20.5 7.75v8.5a4.25 4.25 0 0 1-4.25 4.25h-8.5A4.25 4.25 0 0 1 3.5 16.25v-8.5A4.25 4.25 0 0 1 7.75 3.5zm9.25 1a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5zM12 6.5A5.5 5.5 0 1 0 17.5 12 5.506 5.506 0 0 0 12 6.5zm0 1.5A4 4 0 1 1 8 12a4.005 4.005 0 0 1 4-4z" />
+                </svg>
+                <span className="text-xs font-semibold text-[#071B4A]">
+                  View on Instagram
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
